@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: fit-content;
+  padding: 30px;
+  height: 100vh;
+  border-right: 1px solid #ccc;
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 20px;
+  }
+
+  & li {
+    list-style: none;
+  }
+}
+
+.home {
+  margin: 0 auto;
+}
