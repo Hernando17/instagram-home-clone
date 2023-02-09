@@ -37,6 +37,7 @@
 
   & li {
     list-style: none;
+    cursor: pointer;
   }
 
   &-action {
@@ -68,6 +69,10 @@
     justify-content: space-around;
     padding: 8px 0;
     list-style: none;
+  }
+
+  &-container li {
+    cursor: pointer;
   }
 }
 
