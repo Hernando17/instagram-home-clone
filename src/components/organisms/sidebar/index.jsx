@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faSearch, faCompass, faVideo, faMessage, faInbox } from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faSearch, faCompass, faVideo, faMessage, faInbox, faAdd, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 export function Sidebar() {
@@ -7,6 +7,10 @@ export function Sidebar() {
         <div className="sidebar">
             <div className="sidebar-container">
                 <img className="sidebar-logo-instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" />
+                <div className="sidebar-action">
+                    <FontAwesomeIcon icon={faAdd} size="xl" />
+                    <FontAwesomeIcon icon={faHeart} size="xl" />
+                </div>
                 <ul>
                     <li>
                         <FontAwesomeIcon icon={faHouse} />

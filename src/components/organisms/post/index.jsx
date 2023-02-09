@@ -2,9 +2,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons'
 
-
-
-export function Post({ data }) {
+export function Post({ data, userPost }) {
     return (
         <div className="post">
             {
@@ -13,13 +11,13 @@ export function Post({ data }) {
                         <div className="post-header">
                             <div className="post-header-container">
                                 <div className="post-user">
-                                    <img className="post-pp" src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" />
+                                    <img className="post-pp" src={userPost[index].pp} />
                                     <p>{post.user.username}</p>
                                 </div>
                                 <BsThreeDots />
                             </div>
                         </div>
-                        <img className="post-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
+                        <img className="post-image" src={userPost[index].post} />
                         <div className="post-action">
                             <div className="post-action-container">
                                 <div className="post-react">

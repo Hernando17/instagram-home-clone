@@ -12,3 +12,10 @@
   background: linear-gradient(to right, rgb(255, 13, 235), orange);
   padding: 3px;
 }
+
+.gradient-off {
+  display: flex;
+  position: relative;
+  border-radius: 50%;
+  padding: 3px;
+}

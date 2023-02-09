@@ -12,6 +12,7 @@
 }
 
 .sidebar {
+  display: flex;
   position: sticky;
   top: 0;
   width: 100%;
@@ -20,7 +21,10 @@
   border-bottom: 1px solid #ccc;
 
   &-container {
-    margin: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 8px 12px;
   }
 
   &-logo-instagram {
@@ -33,6 +37,13 @@
 
   & li {
     list-style: none;
+  }
+
+  &-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
   }
 }
 
@@ -54,6 +65,7 @@
     align-items: center;
     background-color: #fafafa;
     border-bottom: 1px solid #ccc;
+    z-index: -1;
 
     &-container {
       display: flex;
@@ -79,6 +91,19 @@
     &-username {
       font-size: 12px;
       margin-top: 8px;
+    }
+
+    &-add {
+      display: flex;
+      position: absolute;
+      background-color: #0095f6;
+      width: fit-content;
+      height: fit-content;
+      padding: 2px;
+      border: #fff 2px solid;
+      bottom: 0;
+      right: 0;
+      border-radius: 100%;
     }
   }
 
