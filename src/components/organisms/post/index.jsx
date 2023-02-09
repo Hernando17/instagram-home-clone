@@ -6,10 +6,10 @@ import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-
 
 export function Post({ data }) {
     return (
-        <div>
+        <div className="post">
             {
                 data.map((post, index) => (
-                    <div key={index} className="post">
+                    <div key={index} className="post-container">
                         <div className="post-header">
                             <div className="post-user">
                                 <img className="post-pp" src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" />
