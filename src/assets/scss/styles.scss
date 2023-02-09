@@ -18,7 +18,6 @@
   width: 100%;
   height: fit-content;
   background-color: #fff;
-  border-bottom: 1px solid #ccc;
   z-index: 10;
 
   &-container {
@@ -48,6 +47,31 @@
   }
 }
 
+.tabnav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 8px 12px;
+  }
+
+  &-container ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 8px 0;
+    list-style: none;
+  }
+}
+
+// Home Page Styles
 .home {
   display: flex;
   width: 100%;
@@ -167,6 +191,19 @@
     &-react {
       display: flex;
       gap: 14px;
+    }
+
+    &-like {
+      display: flex;
+      width: 100%;
+    }
+
+    &-like-container {
+      display: flex;
+      width: 100%;
+      margin: 0 12px;
+      align-items: center;
+      cursor: pointer;
     }
   }
 

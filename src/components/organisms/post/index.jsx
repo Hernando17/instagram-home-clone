@@ -1,6 +1,7 @@
 import { BsThreeDots } from "react-icons/bs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { RandomNumber } from "../../../utils";
 
 export function Post({ data, userPost }) {
     return (
@@ -26,6 +27,11 @@ export function Post({ data, userPost }) {
                                     <FontAwesomeIcon icon={faPaperPlane} size="xl" />
                                 </div>
                                 <FontAwesomeIcon icon={faBookmark} size="xl" />
+                            </div>
+                        </div>
+                        <div className="post-like">
+                            <div className="post-like-container">
+                                <p>{RandomNumber(100)} likes</p>
                             </div>
                         </div>
                     </div>
