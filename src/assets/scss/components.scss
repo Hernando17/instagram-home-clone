@@ -8,9 +8,19 @@
 
 .gradient {
   display: flex;
-  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
   background: linear-gradient(to right, rgb(255, 13, 235), orange);
   padding: 3px;
+
+  &-gap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: white 2px solid;
+  }
 }
 
 .gradient-off {

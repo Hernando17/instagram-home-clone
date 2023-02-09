@@ -12,7 +12,7 @@ export function Post({ data, userPost }) {
                             <div className="post-header-container">
                                 <div className="post-user">
                                     <img className="post-pp" src={userPost[index].pp} />
-                                    <p>{post.user.username}</p>
+                                    <p style={{ cursor: "pointer" }}>{post.user.username}</p>
                                 </div>
                                 <BsThreeDots />
                             </div>

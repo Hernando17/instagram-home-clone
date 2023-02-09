@@ -13,13 +13,15 @@ export function Story({ data, userPost }) {
                             <FontAwesomeIcon icon={faAdd} size="sm" color="white" />
                         </div>
                     </div>
-                    <p className="story-username">{Ellipsis({ text: "Michael", limit: 9 })}</p>
+                    <p className="story-username">Your story</p>
                 </div>
                 {
                     data.map((item, index) => (
                         <div key={index} className="story-item">
                             <div className="gradient">
-                                <img className="story-pp" src={userPost[index].pp} />
+                                <div className="gradient-gap">
+                                    <img className="story-pp" src={userPost[index].pp} />
+                                </div>
                             </div>
                             <p className="story-username">{Ellipsis({ text: item.user.username, limit: 9 })}</p>
                         </div>
