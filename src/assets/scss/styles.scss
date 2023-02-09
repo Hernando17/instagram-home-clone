@@ -18,6 +18,11 @@
   height: 100vh;
   border-right: 1px solid #ccc;
 
+  &-logo-instagram {
+    width: 103px;
+    margin-bottom: 30px;
+  }
+
   & ul {
     display: flex;
     flex-direction: column;
@@ -59,6 +64,11 @@
       background-color: #ccc;
       object-fit: cover;
     }
+
+    &-username {
+      font-size: 12px;
+      margin-top: 8px;
+    }
   }
 
   .post {
@@ -87,6 +97,12 @@
       background-color: #ccc;
       margin-right: 16px;
       object-fit: cover;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }

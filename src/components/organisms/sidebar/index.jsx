@@ -1,26 +1,36 @@
-import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
-import { MdOutlineExplore } from "react-icons/md";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse, faSearch, faCompass, faVideo, faMessage, faInbox } from '@fortawesome/free-solid-svg-icons'
+
 
 export function Sidebar() {
     return (
         <div className="sidebar">
-            <h1>Instagram</h1>
+            <img className="sidebar-logo-instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" />
             <ul>
                 <li>
-                    <AiFillHome />
+                    <FontAwesomeIcon icon={faHouse} />
                     Home
                 </li>
                 <li>
-                    <AiOutlineSearch />
+                    <FontAwesomeIcon icon={faSearch} />
                     Search
                 </li>
                 <li>
-                    <MdOutlineExplore />
+                    <FontAwesomeIcon icon={faCompass} />
                     Explore
                 </li>
-                <li>Reels</li>
-                <li>Messages</li>
-                <li>Notifications</li>
+                <li>
+                    <FontAwesomeIcon icon={faVideo} />
+                    Reels
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faMessage} />
+                    Messages
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faInbox} />
+                    Notifications
+                </li>
                 <li>Create</li>
                 <li>Profile</li>
                 <li>More</li>
