@@ -11,9 +11,15 @@ export default function Home() {
     return (
         <Layout>
             <div className="home">
-                <Story data={data.record.data} />
-                <Post data={data.record.data} />
+                <div className="home-container">
+                    <Story data={data.record.data} />
+                    <Post data={data.record.data} />
+                </div>
+                <div className="suggestion">
+                    <h2>test</h2>
+                </div>
             </div>
+
         </Layout>
     )
 }

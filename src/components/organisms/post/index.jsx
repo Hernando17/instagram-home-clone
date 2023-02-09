@@ -1,5 +1,8 @@
 import { BsThreeDots } from "react-icons/bs";
-import { FcLike } from "react-icons/fc";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons'
+
+
 
 export function Post({ data }) {
     return (
@@ -15,8 +18,13 @@ export function Post({ data }) {
                             <BsThreeDots />
                         </div>
                         <img className="post-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
-                        <div>
-                            <FcLike style={{ color: "white" }} />
+                        <div className="post-action">
+                            <div className="post-react">
+                                <FontAwesomeIcon icon={faHeart} size="xl" />
+                                <FontAwesomeIcon icon={faComment} size="xl" />
+                                <FontAwesomeIcon icon={faPaperPlane} size="xl" />
+                            </div>
+                            <FontAwesomeIcon icon={faBookmark} size="xl" />
                         </div>
                     </div>
                 ))

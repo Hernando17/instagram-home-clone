@@ -11,10 +11,11 @@
 }
 
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: fit-content;
   padding: 30px;
+  width: 184px;
   height: 100vh;
   border-right: 1px solid #ccc;
 
@@ -36,10 +37,17 @@
 }
 
 .home {
-  max-width: 500px;
-  flex-direction: column;
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  max-width: 800px;
+  justify-content: center;
   margin: 0 auto;
-  background-color: #efef;
+
+  &-container {
+    flex-direction: column;
+    background-color: #efef;
+  }
 
   .story {
     display: flex;
@@ -75,19 +83,14 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    margin-bottom: 36px;
     width: 100%;
     max-width: 800px;
 
     &-image {
       width: 100%;
       height: 360px;
-      margin-bottom: 30px;
-    }
-
-    &-user {
-      display: flex;
-      align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     &-pp {
@@ -104,5 +107,28 @@
       justify-content: space-between;
       align-items: center;
     }
+
+    &-user {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    &-action {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-react {
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  .suggestion {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
   }
 }
