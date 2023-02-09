@@ -5,3 +5,10 @@
   padding: 4px;
   border-radius: 100%;
 }
+
+.gradient {
+  display: flex;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(255, 13, 235), orange);
+  padding: 3px;
+}

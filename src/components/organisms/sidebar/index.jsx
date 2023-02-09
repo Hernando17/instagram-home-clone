@@ -1,11 +1,23 @@
+import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
+import { MdOutlineExplore } from "react-icons/md";
+
 export function Sidebar() {
     return (
         <div className="sidebar">
             <h1>Instagram</h1>
             <ul>
-                <li>Home</li>
-                <li>Search</li>
-                <li>Explore</li>
+                <li>
+                    <AiFillHome />
+                    Home
+                </li>
+                <li>
+                    <AiOutlineSearch />
+                    Search
+                </li>
+                <li>
+                    <MdOutlineExplore />
+                    Explore
+                </li>
                 <li>Reels</li>
                 <li>Messages</li>
                 <li>Notifications</li>

@@ -8,66 +8,10 @@ export default function Home() {
 
     if (isLoading) return <div>Loading...</div>
 
-
-    const story = [
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Alex"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Peter"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "John"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Lewis"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-        {
-            image: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
-            username: "Bryan"
-        },
-    ]
-
     return (
         <Layout>
             <div className="home">
-                <Story data={story} />
+                <Story data={data.record.data} />
                 {
                     data.record.data.map((post, index) => (
                         <div key={index} className="post">
