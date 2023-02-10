@@ -1,7 +1,7 @@
 import { BsThreeDots } from "react-icons/bs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons'
-import { RandomNumber } from "../../../utils";
+import { Ellipsis, RandomNumber } from "../../../utils";
 
 export function Post({ data, userPost }) {
     return (
@@ -22,16 +22,19 @@ export function Post({ data, userPost }) {
                         <div className="post-action">
                             <div className="post-action-container">
                                 <div className="post-react">
-                                    <FontAwesomeIcon icon={faHeart} size="xl" />
-                                    <FontAwesomeIcon icon={faComment} size="xl" />
-                                    <FontAwesomeIcon icon={faPaperPlane} size="xl" />
+                                    <div className="post-react-button">
+                                        <FontAwesomeIcon icon={faHeart} size="xl" />
+                                        <FontAwesomeIcon icon={faComment} size="xl" />
+                                        <FontAwesomeIcon icon={faPaperPlane} size="xl" />
+                                    </div>
+                                    <FontAwesomeIcon icon={faBookmark} size="xl" />
                                 </div>
-                                <FontAwesomeIcon icon={faBookmark} size="xl" />
-                            </div>
-                        </div>
-                        <div className="post-like">
-                            <div className="post-like-container">
-                                <p>{RandomNumber(100)} likes</p>
+                                <div className="post-like">
+                                    <p>{RandomNumber(100)} likes</p>
+                                </div>
+                                <div className="post-caption">
+                                    <p><span style={{ fontWeight: "bold" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: 54 })}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
