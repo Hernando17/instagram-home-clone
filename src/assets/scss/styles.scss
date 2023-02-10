@@ -366,6 +366,7 @@
         margin-bottom: 16px;
         width: 100%;
         max-width: 500px;
+        border-bottom: 1px solid #dbdbdb;
       }
 
       &-header {
@@ -496,7 +497,6 @@
       flex-direction: column;
       width: 70%;
       height: fit-content;
-      background-color: aqua;
 
       &-container {
         display: flex;
@@ -516,7 +516,6 @@
         display: flex;
         justify-content: space-between;
         gap: 18px;
-        background-color: pink;
         align-items: center;
       }
 
@@ -529,7 +528,6 @@
       &-detail {
         display: flex;
         flex-direction: column;
-        background-color: yellow;
       }
 
       &-for-you {
@@ -537,7 +535,19 @@
         margin: 24px 0 20px 0;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(156, 236, 156);
+      }
+
+      &-friend {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      &-friend-pp {
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        object-fit: cover;
       }
     }
   }

@@ -13,38 +13,38 @@ export function Sidebar() {
                 <div>
                     <img className="sidebar-logo-ig" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" />
                     <div className="sidebar-action">
-                        <FontAwesomeIcon icon={faAdd} size="xl" />
-                        <FontAwesomeIcon icon={faHeart} size="xl" />
+                        <FontAwesomeIcon icon={faAdd} size="lg" />
+                        <FontAwesomeIcon icon={faHeart} size="lg" />
                     </div>
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faHouse} size="xl" />
+                            <FontAwesomeIcon icon={faHouse} size="lg" />
                             <span>Home</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faSearch} size="xl" />
+                            <FontAwesomeIcon icon={faSearch} size="lg" color="#333333" />
                             <span>Search</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faCompass} size="xl" />
+                            <FontAwesomeIcon icon={faCompass} size="lg" color="#333333" />
                             <span>Explore</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faVideo} size="xl" />
+                            <FontAwesomeIcon icon={faVideo} size="lg" color="#333333" />
                             <span>Reels</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faMessage} size="xl" />
+                            <FontAwesomeIcon icon={faMessage} size="lg" color="#333333" />
                             <span>Messages</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faInbox} size="xl" />
+                            <FontAwesomeIcon icon={faInbox} size="lg" color="#333333" />
                             <span>Notifications</span>
                         </li>
                         <li><img className="sidebar-profile" src={user.pp} /></li>
                     </ul>
                 </div>
-                <FontAwesomeIcon className="sidebar-more" icon={faBars} size="xl" />
+                <FontAwesomeIcon className="sidebar-more" icon={faBars} size="lg" color="#333333" />
             </div>
         </div>
     )

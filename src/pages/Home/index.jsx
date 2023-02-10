@@ -15,7 +15,7 @@ export default function Home() {
                     <Story data={data.record.data} userPost={userPost} />
                     <Post data={data.record.data} userPost={userPost} />
                 </div>
-                <Suggestion />
+                <Suggestion data={data.record.data} />
             </div>
         </Layout>
     )

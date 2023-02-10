@@ -6,9 +6,11 @@ import { BaseURL } from '..'
 export const postApi = createApi({
     reducerPath: 'postApi',
     baseQuery: fetchBaseQuery({ baseUrl: BaseURL }),
+    keepUnusedDataFor: 0,
     endpoints: (builder) => ({
         getAllPost: builder.query({
             query: () => `/b/63bd23fe15ab31599e3290c1`,
+            keepUnusedDataFor: 0,
         }),
     }),
 })
