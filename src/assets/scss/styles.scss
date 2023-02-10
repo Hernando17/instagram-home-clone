@@ -29,6 +29,10 @@
     width: 103px;
   }
 
+  &-logo-ig {
+    display: none;
+  }
+
   & ul {
     display: none;
   }
@@ -43,6 +47,17 @@
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+  }
+
+  &-profile {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  &-more {
+    display: none;
   }
 }
 
@@ -74,10 +89,7 @@
   }
 
   &-profile {
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-    border-radius: 100%;
+    display: none;
   }
 }
 
@@ -264,10 +276,24 @@
     flex-direction: column;
     width: fit-content;
     height: 100vh;
-    background-color: aqua;
+    padding: 0 16px;
+    align-items: center;
+
+    &-container {
+      flex-direction: column;
+      width: fit-content;
+      height: 100%;
+      padding: 24px 0;
+    }
 
     &-logo-instagram {
       display: none;
+    }
+
+    &-logo-ig {
+      display: block;
+      width: 24px;
+      height: 24px;
     }
 
     &-action {
@@ -276,15 +302,29 @@
 
     & ul {
       display: flex;
+      align-items: center;
       flex-direction: column;
       width: 100%;
       justify-content: space-between;
+      margin: 32px 0 0 0;
       padding: 8px 0;
       list-style: none;
+      gap: 32px;
     }
 
     & ul li span {
       display: none;
+    }
+
+    &-profile {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+
+    &-more {
+      display: block;
     }
   }
 
@@ -296,9 +336,10 @@
     .story {
       justify-content: center;
       background-color: transparent;
-
+      border-bottom: 0;
       &-container {
-        max-width: 480px;
+        margin: 32px 0 32px 0;
+        max-width: 500px;
       }
     }
   }
