@@ -14,31 +14,31 @@ export function Sidebar() {
                 <ul>
                     <li>
                         <FontAwesomeIcon icon={faHouse} />
-                        Home
+                        <span>Home</span>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faSearch} />
-                        Search
+                        <span>Search</span>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faCompass} />
-                        Explore
+                        <span>Explore</span>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faVideo} />
-                        Reels
+                        <span>Reels</span>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faMessage} />
-                        Messages
+                        <span>Messages</span>
                     </li>
                     <li>
                         <FontAwesomeIcon icon={faInbox} />
-                        Notifications
+                        <span>Notifications</span>
                     </li>
-                    <li>Create</li>
-                    <li>Profile</li>
-                    <li>More</li>
+                    <li><span>Create</span></li>
+                    <li><span>Profile</span></li>
+                    <li><span>More</span></li>
                 </ul>
             </div>
         </div>
