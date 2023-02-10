@@ -33,7 +33,13 @@ export function Post({ data, userPost }) {
                                     <p>{RandomNumber(100)} likes</p>
                                 </div>
                                 <div className="post-caption">
-                                    <p><span style={{ fontWeight: "bold" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: 54 })}</p>
+                                    <p><span style={{ fontWeight: "bold", cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: 54 })} <span style={{ cursor: "pointer", color: "#8e8e8e" }}>more</span></p>
+                                </div>
+                                <div className="post-comment">
+                                    <p style={{ color: "#8e8e8e" }}>View all {userPost[index].comment.length} comments</p>
+                                </div>
+                                <div className="post-time">
+                                    <p style={{ color: "#8e8e8e", fontSize: 10 }}>15 MINUTES AGO</p>
                                 </div>
                             </div>
                         </div>
