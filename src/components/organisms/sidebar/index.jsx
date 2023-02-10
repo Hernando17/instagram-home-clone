@@ -44,6 +44,10 @@ export function Sidebar() {
                             <span>Notifications</span>
                         </li>
                         <li>
+                            <FontAwesomeIcon icon={faAdd} size="lg" color="#333333" />
+                            <span>Create</span>
+                        </li>
+                        <li>
                             <img className="sidebar-profile" src={user.pp} />
                             <span>Profile</span>
                         </li>

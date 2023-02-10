@@ -13,7 +13,7 @@ export function Suggestion({ data }) {
                         <img className="suggestion-pp" src={user.pp} />
                         <div className="suggestion-detail">
                             <span className="suggestion-username">{user.username}</span>
-                            <span className="suggestion-name" style={{ color: "#8e8e8e" }}>{user.fullname}</span>
+                            <span className="suggestion-name" style={{ color: "#8e8e8e", fontSize: 14 }}>{user.fullname}</span>
                         </div>
                     </div>
                     <span style={{ color: "#0095f6", cursor: "pointer" }}>Switch</span>
@@ -30,7 +30,7 @@ export function Suggestion({ data }) {
                                     <img style={{ cursor: "pointer" }} className="suggestion-friend-pp" src={userPost[index].pp} />
                                     <div className="suggestion-detail">
                                         <span style={{ cursor: "pointer" }} className="suggestion-username">{item.user.username}</span>
-                                        <span style={{ color: "#8e8e8e", cursor: "pointer" }} className="suggestion-name" >{user.fullname}</span>
+                                        <span style={{ color: "#8e8e8e", cursor: "pointer", fontSize: 12 }} className="suggestion-name" >{user.fullname}</span>
                                     </div>
                                 </div>
                                 <span style={{ color: "#0095f6", cursor: "pointer" }}>Follow</span>

@@ -32,7 +32,7 @@ export function Post({ data, userPost }) {
                                     </div>
                                     <FontAwesomeIcon icon={faBookmark} size="xl" />
                                 </div>
-                                <div className="post-like">
+                                <div className="post-like" style={{ cursor: "pointer" }}>
                                     <p>{userPost[index].like} likes</p>
                                 </div>
                                 <div className="post-caption">
