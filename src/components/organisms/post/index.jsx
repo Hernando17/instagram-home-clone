@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { BsThreeDots } from "react-icons/bs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons'
-import { Ellipsis, RandomNumber } from "../../../utils";
+import { Ellipsis } from "../../../utils";
 
 export function Post({ data, userPost }) {
+    const [detail, setDetail] = useState(null);
+
     return (
         <div className="post">
             {
@@ -30,10 +33,12 @@ export function Post({ data, userPost }) {
                                     <FontAwesomeIcon icon={faBookmark} size="xl" />
                                 </div>
                                 <div className="post-like">
-                                    <p>{RandomNumber(100)} likes</p>
+                                    <p>{userPost[index].like} likes</p>
                                 </div>
                                 <div className="post-caption">
-                                    <p><span style={{ fontWeight: "bold", cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: 54 })} <span style={{ cursor: "pointer", color: "#8e8e8e" }}>more</span></p>
+                                    <p><span style={{ fontWeight: "bold", cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: detail != index ? 54 : 1000 })} {
+                                        detail != index && <span style={{ cursor: "pointer", color: "#8e8e8e" }} onClick={() => setDetail(index)}>more</span>
+                                    } </p>
                                 </div>
                                 <div className="post-comment">
                                     <p style={{ color: "#8e8e8e" }}>View all {userPost[index].comment.length} comments</p>

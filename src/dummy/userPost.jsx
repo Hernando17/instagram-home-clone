@@ -7,7 +7,8 @@ export const userPost = [
                 username: "user1",
                 comment: "comment1"
             }
-        ]
+        ],
+        like: 23,
     },
     {
         pp: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
@@ -17,7 +18,8 @@ export const userPost = [
                 username: "user1",
                 comment: "comment1"
             }
-        ]
+        ],
+        like: 82,
     },
     {
         pp: "https://awsimages.detik.net.id/community/media/visual/2017/07/21/654df7f4-3ace-4998-8d54-ffcbfd27508c_169.jpg?w=700&q=90",
@@ -27,7 +29,8 @@ export const userPost = [
                 username: "user1",
                 comment: "comment1"
             }
-        ]
+        ],
+        like: 63,
     },
     {
         pp: "https://cdn-1.motorsport.com/images/amp/Y99mndAY/s6/lewis-hamilton-mercedes-amg-an.jpg",
@@ -37,7 +40,8 @@ export const userPost = [
                 username: "user1",
                 comment: "comment1"
             }
-        ]
+        ],
+        like: 52,
     },
     {
         pp: "https://img.okezone.com/content/2022/11/06/51/2701878/penyebab-lionel-messi-bisa-absen-bela-timnas-argentina-di-piala-dunia-2022-KEWF8ZGwCK.JPG",
@@ -47,6 +51,7 @@ export const userPost = [
                 username: "user1",
                 comment: "comment1"
             }
-        ]
+        ],
+        like: 78,
     }
 ]

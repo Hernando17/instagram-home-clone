@@ -465,7 +465,7 @@
     margin: 0 auto;
     max-width: 900px;
     justify-content: center;
-    gap: 72px;
+    gap: 70px;
 
     &-container {
       width: 100%;
@@ -493,6 +493,7 @@
 
     .suggestion {
       display: flex;
+      flex-direction: column;
       width: 70%;
       height: fit-content;
       background-color: aqua;
@@ -513,9 +514,30 @@
 
       &-user {
         display: flex;
-        gap: 20px;
+        justify-content: space-between;
+        gap: 18px;
         background-color: pink;
         align-items: center;
+      }
+
+      &-data {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      &-detail {
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
+      }
+
+      &-for-you {
+        display: flex;
+        margin: 24px 0 20px 0;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(156, 236, 156);
       }
     }
   }
