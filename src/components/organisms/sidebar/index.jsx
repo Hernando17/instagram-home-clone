@@ -10,12 +10,14 @@ export function Sidebar() {
         <div className="sidebar">
             <div className="sidebar-container">
                 <img className="sidebar-logo-instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" />
-                <div>
-                    <img className="sidebar-logo-ig" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" />
+                <img className="sidebar-logo-ig" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" />
+                <div className="sidebar-mobile">
                     <div className="sidebar-action">
                         <FontAwesomeIcon icon={faAdd} size="lg" />
                         <FontAwesomeIcon icon={faHeart} size="lg" />
                     </div>
+                </div>
+                <div className="sidebar-medium">
                     <ul>
                         <li>
                             <FontAwesomeIcon icon={faHouse} size="lg" />
@@ -41,11 +43,18 @@ export function Sidebar() {
                             <FontAwesomeIcon icon={faInbox} size="lg" color="#333333" />
                             <span>Notifications</span>
                         </li>
-                        <li><img className="sidebar-profile" src={user.pp} /></li>
+                        <li>
+                            <img className="sidebar-profile" src={user.pp} />
+                            <span>Profile</span>
+                        </li>
                     </ul>
                 </div>
-                <FontAwesomeIcon className="sidebar-more" icon={faBars} size="lg" color="#333333" />
+                <div className="sidebar-more-container">
+                    <FontAwesomeIcon className="sidebar-more" icon={faBars} size="lg" color="#333333" />
+                    <span>More</span>
+                </div>
             </div>
         </div>
+
     )
 }

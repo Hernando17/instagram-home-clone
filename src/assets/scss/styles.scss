@@ -45,9 +45,19 @@
 
   &-action {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 12px;
+    width: fit-content;
+  }
+
+  &-mobile {
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+  }
+
+  &-medium {
+    display: none;
   }
 
   &-profile {
@@ -57,7 +67,7 @@
     border-radius: 100%;
   }
 
-  &-more {
+  &-more-container {
     display: none;
   }
 }
@@ -287,15 +297,31 @@
     flex-direction: column;
     width: fit-content;
     height: 100vh;
-    padding: 0 16px;
+    padding: 0 0;
     align-items: center;
     border-right: 1px solid #dbdbdb;
 
     &-container {
+      justify-content: flex-start;
       flex-direction: column;
       width: fit-content;
       height: 100%;
       padding: 24px 0;
+    }
+
+    &-mobile {
+      display: none;
+    }
+
+    &-medium {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 8px 0;
     }
 
     &-logo-instagram {
@@ -306,6 +332,7 @@
       display: block;
       width: 24px;
       height: 24px;
+      margin: 8px;
     }
 
     &-action {
@@ -314,14 +341,23 @@
 
     & ul {
       display: flex;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       width: 100%;
       justify-content: space-between;
       margin: 56px 0 0 0;
       padding: 8px 0;
       list-style: none;
-      gap: 32px;
+      gap: 8px;
+    }
+
+    & ul li {
+      padding: 12px;
+      border-radius: 100%;
+    }
+
+    & ul li:hover {
+      background-color: #fafafa;
     }
 
     & ul li span {
@@ -335,8 +371,11 @@
       border-radius: 100%;
     }
 
-    &-more {
+    &-more-container {
       display: block;
+    }
+    &-more-container span {
+      display: none;
     }
   }
 
@@ -405,8 +444,6 @@
   .sidebar {
     flex-direction: column;
     width: fit-content;
-    height: 100vh;
-    padding: 0 16px;
     align-items: center;
 
     &-container {
@@ -428,18 +465,6 @@
 
     &-action {
       display: none;
-    }
-
-    & ul {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-      justify-content: space-between;
-      margin: 56px 0 0 0;
-      padding: 8px 0;
-      list-style: none;
-      gap: 32px;
     }
 
     & ul li span {
@@ -549,6 +574,51 @@
         border-radius: 100%;
         object-fit: cover;
       }
+    }
+  }
+}
+
+// Responsive Large Screen (Laptop)
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    &-container {
+      align-items: flex-start;
+    }
+
+    &-logo-instagram {
+      display: block;
+    }
+
+    &-logo-ig {
+      display: none;
+    }
+
+    & ul {
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      list-style: none;
+      gap: 8px;
+    }
+
+    & ul li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border-radius: 100px;
+      width: 200px;
+    }
+
+    & ul li span {
+      display: block;
+    }
+
+    &-more-container {
+      display: flex;
+      gap: 12px;
+      margin: 0 12px;
+      align-items: center;
     }
   }
 }
