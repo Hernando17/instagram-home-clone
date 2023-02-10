@@ -9,7 +9,7 @@ export default function Home() {
 
     if (isLoading) return <LoadingInstagram />
     return (
-        <Layout>
+        <Layout title="Instagram">
             <div className="home">
                 <div className="home-container">
                     <Story data={data.record.data} userPost={userPost} />
