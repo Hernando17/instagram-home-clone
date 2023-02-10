@@ -10,7 +10,7 @@ export function Story({ data, userPost }) {
     return (
         <div className="story">
             <div className="story-container">
-                <div className="story-item">
+                <div className="story-item-upload">
                     <div className="gradient-off">
                         <img className="story-pp" src={user.pp} />
                         <div className="story-add">

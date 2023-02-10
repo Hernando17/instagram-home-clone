@@ -20,6 +20,7 @@
 
   &-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     margin: 8px 12px;
@@ -67,7 +68,7 @@
   bottom: 0;
   width: 100%;
   background-color: #fff;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #dbdbdb;
 
   &-container {
     display: flex;
@@ -89,7 +90,10 @@
   }
 
   &-profile {
-    display: none;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 100%;
   }
 }
 
@@ -111,7 +115,7 @@
     text-align: center;
     align-items: center;
     background-color: #fafafa;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #dbdbdb;
 
     &-container {
       display: flex;
@@ -127,11 +131,18 @@
       cursor: pointer;
     }
 
+    &-item-upload {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
     &-pp {
       width: 56px;
       height: 56px;
       border-radius: 100%;
-      background-color: #ccc;
+      background-color: #dbdbdb;
       object-fit: cover;
     }
 
@@ -174,7 +185,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: #ccc;
+      background-color: #dbdbdb;
       margin-right: 16px;
       object-fit: cover;
       cursor: pointer;
@@ -267,7 +278,125 @@
 }
 
 // Resposive Tablet
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    width: fit-content;
+    height: 100vh;
+    padding: 0 16px;
+    align-items: center;
+    border-right: 1px solid #dbdbdb;
+
+    &-container {
+      flex-direction: column;
+      width: fit-content;
+      height: 100%;
+      padding: 24px 0;
+    }
+
+    &-logo-instagram {
+      display: none;
+    }
+
+    &-logo-ig {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    &-action {
+      display: none;
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      margin: 56px 0 0 0;
+      padding: 8px 0;
+      list-style: none;
+      gap: 32px;
+    }
+
+    & ul li span {
+      display: none;
+    }
+
+    &-profile {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+
+    &-more {
+      display: block;
+    }
+  }
+
+  .tabnav {
+    display: none;
+  }
+
+  .home {
+    .story {
+      justify-content: center;
+      background-color: transparent;
+      border-bottom: 0;
+
+      &-container {
+        margin: 32px 0 32px 0;
+        max-width: 500px;
+      }
+
+      &-item-upload {
+        display: none;
+      }
+    }
+
+    .post {
+      &-container {
+        margin: 0 auto;
+        margin-bottom: 16px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+      }
+      &-header-container {
+        margin: 12px 0;
+      }
+
+      &-action {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-action-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 12px 0;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// Responsive Medium Screen (Table Landscape, Small Laptop)
+@media screen and (min-width: 900px) {
   .layout {
     flex-direction: row;
   }
@@ -306,7 +435,7 @@
       flex-direction: column;
       width: 100%;
       justify-content: space-between;
-      margin: 32px 0 0 0;
+      margin: 56px 0 0 0;
       padding: 8px 0;
       list-style: none;
       gap: 32px;
@@ -333,13 +462,60 @@
   }
 
   .home {
+    margin: 0 auto;
+    max-width: 900px;
+    justify-content: center;
+    gap: 72px;
+
+    &-container {
+      width: 100%;
+    }
+
     .story {
       justify-content: center;
       background-color: transparent;
       border-bottom: 0;
+
       &-container {
         margin: 32px 0 32px 0;
-        max-width: 500px;
+        max-width: 900px;
+      }
+    }
+
+    .post {
+      max-width: 900px;
+
+      &-container {
+        margin-bottom: 16px;
+        width: 100%;
+      }
+    }
+
+    .suggestion {
+      display: flex;
+      width: 70%;
+      height: fit-content;
+      background-color: aqua;
+
+      &-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 32px 0 32px 0;
+      }
+
+      &-pp {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+
+      &-user {
+        display: flex;
+        gap: 20px;
+        background-color: pink;
+        align-items: center;
       }
     }
   }
