@@ -21,41 +21,62 @@ export function Sidebar() {
                 <div className="sidebar-medium">
                     <ul>
                         <li>
-                            <FontAwesomeIcon icon={faHouse} size="lg" />
+                            <div className="sidebar-icon">
+                                <FontAwesomeIcon icon={faHouse} size="lg" />
+                            </div>
                             <span><h4>Home</h4></span>
                         </li>
                         <li>
-                            <SlMagnifier size={24} />
+                            <div className="sidebar-icon">
+                                <SlMagnifier size={24} />
+                            </div>
                             <span>Search</span>
                         </li>
                         <li>
-                            <SlCompass size={24} />
+                            <div className="sidebar-icon">
+                                <SlCompass size={24} />
+                            </div>
                             <span>Explore</span>
                         </li>
                         <li>
-                            <SlCamrecorder size={24} />
+                            <div className="sidebar-icon">
+                                <SlCamrecorder size={24} />
+                            </div>
                             <span>Reels</span>
                         </li>
                         <li>
-                            <SlBubbles size={24} />
+                            <div className="sidebar-icon">
+                                <div className="sidebar-icon-notification">
+                                    <span>2</span>
+                                </div>
+                                <SlBubbles size={24} />
+                            </div>
                             <span>Messages</span>
                         </li>
                         <li>
-                            <SlHeart size={24} />
+                            <div className="sidebar-icon">
+                                <SlHeart size={24} />
+                            </div>
                             <span>Notifications</span>
                         </li>
                         <li>
-                            <SlPlus size={24} />
+                            <div className="sidebar-icon">
+                                <SlPlus size={24} />
+                            </div>
                             <span>Create</span>
                         </li>
                         <li>
-                            <img className="sidebar-profile" src={user.pp} />
+                            <div className="sidebar-icon">
+                                <img className="sidebar-profile" src={user.pp} />
+                            </div>
                             <span>Profile</span>
                         </li>
                     </ul>
                 </div>
                 <div className="sidebar-more-container">
-                    <SlMenu size={24} />
+                    <div className="sidebar-icon">
+                        <SlMenu size={24} />
+                    </div>
                     <span>More</span>
                 </div>
             </div>

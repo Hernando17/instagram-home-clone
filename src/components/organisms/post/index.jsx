@@ -50,7 +50,7 @@ export function Post({ data, userPost }) {
                                     <img className="post-pp" src={userPost[index].pp} />
                                     <p style={{ cursor: "pointer", fontSize: 14, fontWeight: 600 }}>{post.user.username}</p>
                                 </div>
-                                <SlOptions style={{ cursor: "pointer" }} />
+                                <SlOptions className="post-react-icon" />
                             </div>
                         </div>
                         <img className="post-image" src={userPost[index].post} />
@@ -58,11 +58,11 @@ export function Post({ data, userPost }) {
                             <div className="post-action-container">
                                 <div className="post-react">
                                     <div className="post-react-button">
-                                        <SlHeart size={22} />
-                                        <SlBubble size={22} />
-                                        <SlPaperPlane size={22} />
+                                        <SlHeart size={22} className="post-react-icon" />
+                                        <SlBubble size={22} className="post-react-icon" />
+                                        <SlPaperPlane size={22} className="post-react-icon" />
                                     </div>
-                                    <BsBookmark size={22} style={{ cursor: "pointer" }} />
+                                    <BsBookmark size={22} className="post-react-icon" />
                                 </div>
                                 <div className="post-like" style={{ cursor: "pointer", fontSize: 14 }}>
                                     <p>{userPost[index].like} likes</p>

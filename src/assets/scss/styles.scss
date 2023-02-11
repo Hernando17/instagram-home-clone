@@ -71,6 +71,29 @@
   &-more-container {
     display: none;
   }
+
+  &-icon {
+    display: flex;
+    position: relative;
+    padding: 3px 3px 0 0;
+  }
+
+  &-icon-notification {
+    display: flex;
+    font-size: 10px;
+    padding: 4px;
+    width: 4px;
+    height: 4px;
+    justify-content: center;
+    border-radius: 100%;
+    color: #fff;
+    align-items: center;
+    background-color: #ff0169;
+    border: #fff 3px solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .tabnav {
@@ -252,8 +275,15 @@
     &-react-button {
       display: flex;
       align-items: center;
-      cursor: pointer;
       gap: 20px;
+    }
+
+    &-react-icon {
+      cursor: pointer;
+    }
+
+    &-react-icon:hover {
+      color: #8e8e8e;
     }
 
     &-like {
@@ -336,7 +366,7 @@
       justify-content: space-between;
       width: 100%;
       height: 100%;
-      padding: 8px 0;
+      padding: 0 0;
     }
 
     &-logo-instagram {
@@ -363,7 +393,7 @@
       margin: 56px 0 0 0;
       padding: 8px 0;
       list-style: none;
-      gap: 8px;
+      gap: 6px;
     }
 
     & ul li {
@@ -388,6 +418,8 @@
 
     &-more-container {
       display: block;
+      position: relative;
+      bottom: 0;
       cursor: pointer;
     }
 
@@ -617,7 +649,6 @@
   .sidebar {
     &-container {
       align-items: flex-start;
-      padding: 24px 0;
     }
 
     &-logo-instagram {
@@ -635,7 +666,6 @@
       width: 100%;
       justify-content: space-between;
       list-style: none;
-      gap: 8px;
       margin: 24px 0 0 0;
     }
 
