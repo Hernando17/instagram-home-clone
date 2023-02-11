@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 8px 12px;
+    padding: 8px 12px;
   }
 
   &-logo-instagram {
@@ -85,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 8px 12px;
+    padding: 8px 12px;
   }
 
   &-container ul {
@@ -308,7 +308,7 @@
     flex-direction: column;
     width: fit-content;
     height: 100vh;
-    padding: 0 0;
+    padding: 0 10px;
     align-items: center;
     border-right: 1px solid #dbdbdb;
 
@@ -603,6 +603,7 @@
   .sidebar {
     &-container {
       align-items: flex-start;
+      padding: 24px 0;
     }
 
     &-logo-instagram {

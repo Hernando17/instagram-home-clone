@@ -22,7 +22,7 @@ export function Sidebar() {
                     <ul>
                         <li>
                             <FontAwesomeIcon icon={faHouse} size="lg" />
-                            <span>Home</span>
+                            <span><h4>Home</h4></span>
                         </li>
                         <li>
                             <SlMagnifier size={24} />
