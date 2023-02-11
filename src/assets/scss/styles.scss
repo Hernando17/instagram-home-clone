@@ -130,8 +130,12 @@
     &-container {
       display: flex;
       width: 100%;
-      margin: 8px;
       gap: 18px;
+    }
+
+    &-list {
+      padding: 8px;
+      gap: 16px;
     }
 
     &-item {
@@ -391,6 +395,10 @@
       &-container {
         margin: 32px 0 32px 0;
         max-width: 500px;
+      }
+
+      &-list {
+        padding: 0px;
       }
 
       &-item-upload {

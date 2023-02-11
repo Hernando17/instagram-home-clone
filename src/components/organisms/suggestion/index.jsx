@@ -20,7 +20,7 @@ export function Suggestion({ data }) {
                 </div>
                 <div className="suggestion-for-you">
                     <span style={{ color: "#8e8e8e" }}>Suggestions for you</span>
-                    <span style={{ cursor: "pointer", cursor: "pointer" }}>See All</span>
+                    <span style={{ cursor: "pointer" }}>See All</span>
                 </div>
                 <div className="suggestion-friend">
                     {
