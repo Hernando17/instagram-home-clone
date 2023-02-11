@@ -429,7 +429,7 @@
         margin: 0 auto;
         margin-bottom: 16px;
         width: 100%;
-        max-width: 500px;
+        max-width: 460px;
         border-bottom: 1px solid #dbdbdb;
       }
 
@@ -543,7 +543,7 @@
     margin: 0 auto;
     max-width: 900px;
     justify-content: center;
-    gap: 70px;
+    gap: 32px;
 
     &-container {
       width: 100%;
@@ -556,7 +556,7 @@
 
       &-container {
         margin: 32px 0 32px 0;
-        max-width: 900px;
+        max-width: 460px;
       }
     }
 
@@ -572,7 +572,7 @@
     .suggestion {
       display: flex;
       flex-direction: column;
-      width: 70%;
+      width: 60%;
       height: fit-content;
 
       &-container {
