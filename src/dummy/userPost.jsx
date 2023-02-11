@@ -4,9 +4,21 @@ export const userPost = [
         post: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png",
         comment: [
             {
-                username: "user1",
-                comment: "comment1"
-            }
+                username: "linkinpark",
+                comment: "Wow! nice picture"
+            },
+            {
+                username: "jessica",
+                comment: "Nice"
+            },
+            {
+                username: "jhon",
+                comment: "Can you send me the photo?"
+            },
+            {
+                username: "william",
+                comment: "Where are you?"
+            },
         ],
         like: 23,
     },
@@ -15,9 +27,13 @@ export const userPost = [
         post: "https://www.cadillac.com/content/dam/cadillac/na/us/english/ux/homepage-foundation/new/22-homepage-masthead-celestiq-reveal-24cacl50051-l-v2.jpg?imwidth=960",
         comment: [
             {
-                username: "user1",
-                comment: "comment1"
-            }
+                username: "carinstagram",
+                comment: "Nice car"
+            },
+            {
+                username: "raymond",
+                comment: "The best car ever"
+            },
         ],
         like: 82,
     },
@@ -26,9 +42,17 @@ export const userPost = [
         post: "https://www.diykamera.com/wp-content/uploads/2017/07/cara-memotret-pemandangan.jpg",
         comment: [
             {
-                username: "user1",
-                comment: "comment1"
-            }
+                username: "antony",
+                comment: "Where is this place?"
+            },
+            {
+                username: "beingsalmankhan",
+                comment: "can you send me the photo?"
+            },
+            {
+                username: "jeff",
+                comment: "looks nice"
+            },
         ],
         like: 63,
     },
@@ -37,9 +61,13 @@ export const userPost = [
         post: "https://asset.kompas.com/crops/mIqPgJPPIuHZvTtjk6CLdEK1Wmo=/135x136:954x682/750x500/data/photo/2021/06/07/60bd809e08d2a.jpg",
         comment: [
             {
-                username: "user1",
-                comment: "comment1"
-            }
+                username: "tony",
+                comment: "Nice race"
+            },
+            {
+                username: "Stewie",
+                comment: "Best race ever"
+            },
         ],
         like: 52,
     },
@@ -48,9 +76,25 @@ export const userPost = [
         post: "https://digitalhub.fifa.com/transform/b817ecc7-f044-45b8-8f67-a084a5d10e39/Argentina-v-France-Final-FIFA-World-Cup-Qatar-2022?io=transform:fill,height:868,width:1536&quality=100",
         comment: [
             {
-                username: "user1",
-                comment: "comment1"
-            }
+                username: "harry",
+                comment: "Wow! congratulations bro"
+            },
+            {
+                username: "brian",
+                comment: "Well done mate"
+            },
+            {
+                username: "glen",
+                comment: "Congrat champ!"
+            },
+            {
+                username: "james",
+                comment: "Nice!"
+            },
+            {
+                username: "michael",
+                comment: "Good game bro"
+            },
         ],
         like: 78,
     }

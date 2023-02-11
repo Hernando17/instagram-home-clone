@@ -1,10 +1,33 @@
 import { useState } from "react";
 import { BsBookmark } from "react-icons/bs";
 import { Ellipsis } from "../../../utils";
-import { SlHeart, SlPaperPlane, SlBubble, SlOptions } from "react-icons/sl";
+import { SlHeart, SlPaperPlane, SlBubble, SlOptions, SlEmotsmile } from "react-icons/sl";
 
 export function Post({ data, userPost }) {
     const [detail, setDetail] = useState(null);
+    const [postComment, setPostComment] = useState([]);
+
+    function setComment(e) {
+        e.preventDefault();
+        setPostComment({
+            ...postComment,
+            [e.target.id]: {
+                value: e.target.value,
+                id: e.target.id
+            }
+        });
+    }
+
+    function clearComment(e) {
+        e.preventDefault();
+        setPostComment({
+            ...postComment,
+            [e.target.id]: {
+                value: "",
+                id: e.target.id
+            }
+        });
+    }
 
     return (
         <div className="post">
@@ -15,7 +38,7 @@ export function Post({ data, userPost }) {
                             <div className="post-header-container">
                                 <div className="post-user">
                                     <img className="post-pp" src={userPost[index].pp} />
-                                    <p style={{ cursor: "pointer" }}>{post.user.username}</p>
+                                    <p style={{ cursor: "pointer", fontSize: 14, fontWeight: 600 }}>{post.user.username}</p>
                                 </div>
                                 <SlOptions style={{ cursor: "pointer" }} />
                             </div>
@@ -31,16 +54,31 @@ export function Post({ data, userPost }) {
                                     </div>
                                     <BsBookmark size={22} style={{ cursor: "pointer" }} />
                                 </div>
-                                <div className="post-like" style={{ cursor: "pointer" }}>
+                                <div className="post-like" style={{ cursor: "pointer", fontSize: 14 }}>
                                     <p>{userPost[index].like} likes</p>
                                 </div>
                                 <div className="post-caption">
-                                    <p><span style={{ fontWeight: "bold", cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: detail != index ? 54 : 1000 })} {
+                                    <p style={{ fontSize: 14 }}><span style={{ fontWeight: 600, fontSize: 14, cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: detail != index ? 54 : 1000 })} {
                                         detail != index && <span style={{ cursor: "pointer", color: "#8e8e8e" }} onClick={() => setDetail(index)}>more</span>
                                     } </p>
                                 </div>
                                 <div className="post-comment">
-                                    <p style={{ color: "#8e8e8e" }}>View all {userPost[index].comment.length} comments</p>
+                                    <p style={{ color: "#8e8e8e", fontSize: 14 }}>View all {userPost[index].comment.length} comments</p>
+                                </div>
+                                {userPost[index].comment.slice(0, 1).map((comment, number) => (
+                                    <div className="post-caption" key={number}>
+                                        <p style={{ fontSize: 14 }}><span style={{ fontWeight: 600, cursor: "pointer", fontSize: 14 }}>{comment.username}</span> {comment.comment} </p>
+                                    </div>
+                                ))}
+                                <div className="post-input">
+                                    <input type="text" id={index} value={!postComment[index] ? "" : postComment[index].value} onChange={setComment} className="post-comment-input" placeholder="Add a comment..." />
+                                    <div className="post-comment-action">
+                                        {
+                                            !postComment[index] || postComment[index].value == "" ? ("") : (<span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }} id={index} onClick={clearComment}>Post</span>)
+                                        }
+
+                                        <SlEmotsmile size={12} style={{ cursor: "pointer" }} color="#8e8e8e" />
+                                    </div>
                                 </div>
                                 <div className="post-time">
                                     <p style={{ color: "#8e8e8e", fontSize: 10 }}>15 MINUTES AGO</p>

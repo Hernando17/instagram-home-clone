@@ -276,7 +276,12 @@
 
     &-time {
       display: flex;
+      margin: 10px 0 0 0;
       width: 100%;
+    }
+
+    &-input {
+      display: none;
     }
   }
 
@@ -450,6 +455,33 @@
         margin: 12px 0;
         justify-content: space-between;
         align-items: center;
+      }
+
+      &-time {
+        display: none;
+      }
+
+      &-input {
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+
+      &-comment-input {
+        display: block;
+        width: 100%;
+        margin-top: 14px;
+        border: 0;
+      }
+
+      &-comment-input:focus {
+        outline: none;
+      }
+
+      &-comment-action {
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
     }
   }

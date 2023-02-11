@@ -16,11 +16,11 @@ export function Suggestion({ data }) {
                             <span className="suggestion-name" style={{ color: "#8e8e8e", fontSize: 14 }}>{user.fullname}</span>
                         </div>
                     </div>
-                    <span style={{ color: "#0095f6", cursor: "pointer" }}>Switch</span>
+                    <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }}>Switch</span>
                 </div>
                 <div className="suggestion-for-you">
-                    <span style={{ color: "#8e8e8e" }}>Suggestions for you</span>
-                    <span style={{ cursor: "pointer" }}>See All</span>
+                    <span style={{ color: "#8e8e8e", fontSize: 14 }}>Suggestions for you</span>
+                    <span style={{ cursor: "pointer", fontSize: 14 }}>See All</span>
                 </div>
                 <div className="suggestion-friend">
                     {
@@ -29,11 +29,11 @@ export function Suggestion({ data }) {
                                 <div className="suggestion-data">
                                     <img style={{ cursor: "pointer" }} className="suggestion-friend-pp" src={userPost[index].pp} />
                                     <div className="suggestion-detail">
-                                        <span style={{ cursor: "pointer" }} className="suggestion-username">{item.user.username}</span>
+                                        <span style={{ cursor: "pointer", fontSize: 14 }} className="suggestion-username">{item.user.username}</span>
                                         <span style={{ color: "#8e8e8e", cursor: "pointer", fontSize: 12 }} className="suggestion-name" >{user.fullname}</span>
                                     </div>
                                 </div>
-                                <span style={{ color: "#0095f6", cursor: "pointer" }}>Follow</span>
+                                <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }}>Follow</span>
                             </div>
                         ))
                     }
