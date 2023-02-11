@@ -405,14 +405,15 @@
   }
 
   .home {
+    padding: 56px 0 32px 0;
+
     .story {
       justify-content: center;
       background-color: transparent;
       border-bottom: 0;
 
       &-container {
-        margin: 32px 0 32px 0;
-        max-width: 500px;
+        max-width: 460px;
       }
 
       &-list {
@@ -543,43 +544,23 @@
     margin: 0 auto;
     max-width: 900px;
     justify-content: center;
-    gap: 32px;
+    gap: 64px;
 
     &-container {
-      width: 100%;
-    }
-
-    .story {
-      justify-content: center;
-      background-color: transparent;
-      border-bottom: 0;
-
-      &-container {
-        margin: 32px 0 32px 0;
-        max-width: 460px;
-      }
-    }
-
-    .post {
-      max-width: 900px;
-
-      &-container {
-        margin-bottom: 16px;
-        width: 100%;
-      }
+      width: fit-content;
     }
 
     .suggestion {
       display: flex;
       flex-direction: column;
-      width: 60%;
       height: fit-content;
+      width: 35%;
 
       &-container {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 32px 0 32px 0;
+        margin-top: 5px;
       }
 
       &-pp {
