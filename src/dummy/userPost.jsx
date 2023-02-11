@@ -20,6 +20,7 @@ export const userPost = [
                 comment: "Where are you?"
             },
         ],
+        follower: ["linkinpark", "jessica", "jhon", "william"],
         like: 23,
     },
     {
@@ -35,6 +36,7 @@ export const userPost = [
                 comment: "The best car ever"
             },
         ],
+        follower: ["carinstagram", "raymond"],
         like: 82,
     },
     {
@@ -54,6 +56,7 @@ export const userPost = [
                 comment: "looks nice"
             },
         ],
+        follower: ["antony", "beingsalmankhan", "jeff"],
         like: 63,
     },
     {
@@ -69,6 +72,7 @@ export const userPost = [
                 comment: "Best race ever"
             },
         ],
+        follower: ["tony", "Stewie"],
         like: 52,
     },
     {
@@ -96,6 +100,7 @@ export const userPost = [
                 comment: "Good game bro"
             },
         ],
+        follower: ["harry", "brian", "glen", "james", "michael"],
         like: 78,
     }
 ]
