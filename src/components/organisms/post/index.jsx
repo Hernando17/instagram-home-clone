@@ -4,8 +4,18 @@ import { Ellipsis } from "../../../utils";
 import { SlHeart, SlPaperPlane, SlBubble, SlOptions, SlEmotsmile } from "react-icons/sl";
 
 export function Post({ data, userPost }) {
-    const [detail, setDetail] = useState(null);
+    const [detail, setDetail] = useState([]);
     const [postComment, setPostComment] = useState([]);
+
+    function openDetail(e) {
+        e.preventDefault();
+        setDetail({
+            ...detail,
+            [e.target.id]: {
+                id: e.target.id
+            }
+        });
+    }
 
     function setComment(e) {
         e.preventDefault();
@@ -58,8 +68,8 @@ export function Post({ data, userPost }) {
                                     <p>{userPost[index].like} likes</p>
                                 </div>
                                 <div className="post-caption">
-                                    <p style={{ fontSize: 14 }}><span style={{ fontWeight: 600, fontSize: 14, cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: detail != index ? 54 : 1000 })} {
-                                        detail != index && <span style={{ cursor: "pointer", color: "#8e8e8e" }} onClick={() => setDetail(index)}>more</span>
+                                    <p style={{ fontSize: 14 }}><span style={{ fontWeight: 600, fontSize: 14, cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: !detail[index] ? 40 : 1000 })} {
+                                        !detail[index] && post.caption.text.length > 40 ? (<span style={{ cursor: "pointer", color: "#8e8e8e" }} id={index} onClick={openDetail}>more</span>) : ("")
                                     } </p>
                                 </div>
                                 <div className="post-comment">

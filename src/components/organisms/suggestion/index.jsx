@@ -16,11 +16,11 @@ export function Suggestion({ data }) {
                             <span className="suggestion-name" style={{ color: "#8e8e8e", fontSize: 14 }}>{user.fullname}</span>
                         </div>
                     </div>
-                    <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }}>Switch</span>
+                    <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 12 }}>Switch</span>
                 </div>
                 <div className="suggestion-for-you">
                     <span style={{ color: "#8e8e8e", fontSize: 14 }}>Suggestions for you</span>
-                    <span style={{ cursor: "pointer", fontSize: 14 }}>See All</span>
+                    <span style={{ cursor: "pointer", fontSize: 12 }}>See All</span>
                 </div>
                 <div className="suggestion-friend">
                     {
@@ -33,7 +33,7 @@ export function Suggestion({ data }) {
                                         <span style={{ color: "#8e8e8e", cursor: "pointer", fontSize: 12 }} className="suggestion-name" >{user.fullname}</span>
                                     </div>
                                 </div>
-                                <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }}>Follow</span>
+                                <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 12 }}>Follow</span>
                             </div>
                         ))
                     }
