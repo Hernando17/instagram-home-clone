@@ -36,7 +36,7 @@ export const userPost = [
                 comment: "The best car ever"
             },
         ],
-        follower: ["carinstagram", "raymond"],
+        follower: ["raymond"],
         like: 82,
     },
     {

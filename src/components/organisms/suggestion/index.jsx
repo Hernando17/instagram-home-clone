@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import { currentUser } from "../../../redux/features/userSlice"
 import { userPost } from "../../../dummy";
-import { FollowedBy } from "../../../utils";
+import { Ellipsis, FollowedBy } from "../../../utils";
 
 export function Suggestion({ data }) {
     const user = useSelector(currentUser);
@@ -31,7 +31,12 @@ export function Suggestion({ data }) {
                                     <img style={{ cursor: "pointer" }} className="suggestion-friend-pp" src={userPost[index].pp} />
                                     <div className="suggestion-detail">
                                         <span style={{ cursor: "pointer", fontSize: 14 }} className="suggestion-username">{item.user.username}</span>
-                                        <span style={{ color: "#8e8e8e", cursor: "pointer", fontSize: 12 }} className="suggestion-name" >Followed by {userPost[index].follower[0]} + {FollowedBy({ data: userPost[index].follower })} more</span>
+                                        <span style={{ color: "#8e8e8e", cursor: "pointer", fontSize: 12 }} className="suggestion-name" >
+                                            {
+                                                userPost[index].follower.length > 1 ? Ellipsis({ text: `Followed by ${userPost[index].follower[0]} + ${FollowedBy({ data: userPost[index].follower })} more`, limit: 33 }) : Ellipsis({ text: `Followed by ${userPost[index].follower[0]}`, limit: 30 })
+                                            }
+
+                                        </span>
                                     </div>
                                 </div>
                                 <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 12 }}>Follow</span>
