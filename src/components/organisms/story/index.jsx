@@ -7,8 +7,6 @@ import { currentUser } from "../../../redux/features/userSlice";
 import {
     SnapList,
     SnapItem,
-    useVisibleElements,
-    useScroll,
 } from 'react-snaplist-carousel';
 
 export function Story({ data, userPost }) {
@@ -19,15 +17,13 @@ export function Story({ data, userPost }) {
             <div className="story-container">
                 <SnapList className="story-list">
                     <SnapItem snapAlign="center" className="story-item-upload">
-                        <div>
-                            <div className="gradient-off">
-                                <img className="story-pp" src={user.pp} />
-                                <div className="story-add">
-                                    <FontAwesomeIcon icon={faAdd} size="sm" color="white" />
-                                </div>
+                        <div className="gradient-off">
+                            <img className="story-pp" src={user.pp} />
+                            <div className="story-add">
+                                <FontAwesomeIcon icon={faAdd} size="sm" color="white" />
                             </div>
-                            <p className="story-username">Your story</p>
                         </div>
+                        <p className="story-username">Your story</p>
                     </SnapItem>
                     {
                         data.map((item, index) => (

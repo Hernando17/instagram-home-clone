@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faSearch, faCompass, faVideo, faMessage, faInbox, faAdd, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { currentUser } from '../../../redux/features/userSlice'
+import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu } from "react-icons/sl";
 
 export function TabNav() {
     const user = useSelector(currentUser);
@@ -14,13 +15,13 @@ export function TabNav() {
                         <FontAwesomeIcon icon={faHouse} size="lg" />
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faSearch} size="lg" />
+                        <SlMagnifier size={24} />
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faVideo} size="lg" />
+                        <SlCamrecorder size={24} />
                     </li>
                     <li>
-                        <FontAwesomeIcon icon={faMessage} size="lg" />
+                        <SlBubbles size={24} />
                     </li>
                     <li>
                         <img src={user.pp} className="tabnav-profile" />

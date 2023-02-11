@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faSearch, faCompass, faVideo, faMessage, faInbox, faAdd, faHeart, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 import { currentUser } from '../../../redux/features/userSlice'
+import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu } from "react-icons/sl";
 
 export function Sidebar() {
     const user = useSelector(currentUser)
@@ -13,8 +14,8 @@ export function Sidebar() {
                 <img className="sidebar-logo-ig" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" />
                 <div className="sidebar-mobile">
                     <div className="sidebar-action">
-                        <FontAwesomeIcon icon={faAdd} size="lg" />
-                        <FontAwesomeIcon icon={faHeart} size="lg" />
+                        <SlPlus size={24} />
+                        <SlHeart size={24} />
                     </div>
                 </div>
                 <div className="sidebar-medium">
@@ -24,27 +25,27 @@ export function Sidebar() {
                             <span>Home</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faSearch} size="lg" color="#333333" />
+                            <SlMagnifier size={24} />
                             <span>Search</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faCompass} size="lg" color="#333333" />
+                            <SlCompass size={24} />
                             <span>Explore</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faVideo} size="lg" color="#333333" />
+                            <SlCamrecorder size={24} />
                             <span>Reels</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faMessage} size="lg" color="#333333" />
+                            <SlBubbles size={24} />
                             <span>Messages</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faInbox} size="lg" color="#333333" />
+                            <SlHeart size={24} />
                             <span>Notifications</span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faAdd} size="lg" color="#333333" />
+                            <SlPlus size={24} />
                             <span>Create</span>
                         </li>
                         <li>
@@ -54,7 +55,7 @@ export function Sidebar() {
                     </ul>
                 </div>
                 <div className="sidebar-more-container">
-                    <FontAwesomeIcon className="sidebar-more" icon={faBars} size="lg" color="#333333" />
+                    <SlMenu size={24} />
                     <span>More</span>
                 </div>
             </div>

@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { BsThreeDots } from "react-icons/bs";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { BsBookmark } from "react-icons/bs";
 import { Ellipsis } from "../../../utils";
+import { SlHeart, SlPaperPlane, SlBubble, SlOptions } from "react-icons/sl";
 
 export function Post({ data, userPost }) {
     const [detail, setDetail] = useState(null);
@@ -18,7 +17,7 @@ export function Post({ data, userPost }) {
                                     <img className="post-pp" src={userPost[index].pp} />
                                     <p style={{ cursor: "pointer" }}>{post.user.username}</p>
                                 </div>
-                                <BsThreeDots />
+                                <SlOptions style={{ cursor: "pointer" }} />
                             </div>
                         </div>
                         <img className="post-image" src={userPost[index].post} />
@@ -26,11 +25,11 @@ export function Post({ data, userPost }) {
                             <div className="post-action-container">
                                 <div className="post-react">
                                     <div className="post-react-button">
-                                        <FontAwesomeIcon icon={faHeart} size="xl" />
-                                        <FontAwesomeIcon icon={faComment} size="xl" />
-                                        <FontAwesomeIcon icon={faPaperPlane} size="xl" />
+                                        <SlHeart size={22} />
+                                        <SlBubble size={22} />
+                                        <SlPaperPlane size={22} />
                                     </div>
-                                    <FontAwesomeIcon icon={faBookmark} size="xl" />
+                                    <BsBookmark size={22} style={{ cursor: "pointer" }} />
                                 </div>
                                 <div className="post-like" style={{ cursor: "pointer" }}>
                                     <p>{userPost[index].like} likes</p>
