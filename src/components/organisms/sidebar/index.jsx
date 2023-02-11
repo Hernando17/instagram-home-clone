@@ -3,6 +3,7 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 import { currentUser } from '../../../redux/features/userSlice'
 import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu } from "react-icons/sl";
+import { InstagramTextLogo, InstagramLogo } from '../../../assets';
 
 export function Sidebar() {
     const user = useSelector(currentUser)
@@ -10,8 +11,8 @@ export function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar-container">
-                <img className="sidebar-logo-instagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" />
-                <img className="sidebar-logo-ig" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" />
+                <img className="sidebar-logo-instagram" src={InstagramTextLogo} />
+                <img className="sidebar-logo-ig" src={InstagramLogo} />
                 <div className="sidebar-mobile">
                     <div className="sidebar-action">
                         <SlPlus size={24} />
