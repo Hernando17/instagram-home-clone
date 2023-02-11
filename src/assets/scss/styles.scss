@@ -76,23 +76,23 @@
   &-icon {
     display: flex;
     position: relative;
-    padding: 3px 3px 0 0;
+    padding: 0 5px 0 0;
   }
 
   &-icon-notification {
     display: flex;
     font-size: 10px;
-    padding: 4px;
+    padding: 6px;
     width: 4px;
     height: 4px;
     justify-content: center;
     border-radius: 100%;
     color: #fff;
     align-items: center;
-    background-color: #ff0169;
-    border: #fff 3px solid;
+    background-color: #ff3040;
+    border: #fff 1px solid;
     position: absolute;
-    top: 0;
+    top: -4px;
     right: 0;
   }
 }

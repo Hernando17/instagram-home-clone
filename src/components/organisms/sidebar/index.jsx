@@ -48,7 +48,7 @@ export function Sidebar() {
                         <li>
                             <div className="sidebar-icon">
                                 <div className="sidebar-icon-notification">
-                                    <span>2</span>
+                                    <small>2</small>
                                 </div>
                                 <SlBubbles size={24} />
                             </div>
