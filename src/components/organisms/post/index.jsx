@@ -48,7 +48,7 @@ export function Post({ data, userPost }) {
                             <div className="post-header-container">
                                 <div className="post-user">
                                     <img className="post-pp" src={userPost[index].pp} />
-                                    <p style={{ cursor: "pointer", fontSize: 14, fontWeight: 600 }}>{post.user.username}</p>
+                                    <a href="#" className="post-username">{post.user.username}</a>
                                 </div>
                                 <SlOptions className="post-react-icon" />
                             </div>
@@ -68,7 +68,7 @@ export function Post({ data, userPost }) {
                                     <p>{userPost[index].like} likes</p>
                                 </div>
                                 <div className="post-caption">
-                                    <p style={{ fontSize: 14 }}><span style={{ fontWeight: 600, fontSize: 14, cursor: "pointer" }}>{post.caption.from.username}</span> {Ellipsis({ text: post.caption.text, limit: !detail[index] ? 40 : 1000 })} {
+                                    <p style={{ fontSize: 14 }}><a href="#" className="post-username">{post.caption.from.username}</a> {Ellipsis({ text: post.caption.text, limit: !detail[index] ? 40 : 1000 })} {
                                         !detail[index] && post.caption.text.length > 40 ? (<span style={{ cursor: "pointer", color: "#8e8e8e" }} id={index} onClick={openDetail}>more</span>) : ("")
                                     } </p>
                                 </div>
@@ -77,7 +77,7 @@ export function Post({ data, userPost }) {
                                 </div>
                                 {userPost[index].comment.slice(0, 1).map((comment, number) => (
                                     <div className="post-caption" key={number}>
-                                        <p style={{ fontSize: 14 }}><span style={{ fontWeight: 600, cursor: "pointer", fontSize: 14 }}>{comment.username}</span> {comment.comment} </p>
+                                        <p style={{ fontSize: 14 }}><a href="#" className="post-username">{comment.username}</a> {comment.comment} </p>
                                     </div>
                                 ))}
                                 <div className="post-input">

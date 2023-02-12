@@ -25,7 +25,7 @@ export function Sidebar() {
                             <div className="sidebar-icon">
                                 <FontAwesomeIcon icon={faHouse} size="lg" />
                             </div>
-                            <span><h4>Home</h4></span>
+                            <span className="active">Home</span>
                         </li>
                         <li>
                             <div className="sidebar-icon">
