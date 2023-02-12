@@ -1,6 +1,5 @@
 import Layout from '../Layout'
 import { useGetAllPostQuery } from '../../redux/services/post.api'
-import { AiOutlineRight } from "react-icons/ai";
 import { Story, Post, Suggestion, LoadingInstagram } from '../../components';
 import { userPost } from '../../dummy';
 
