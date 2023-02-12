@@ -72,7 +72,7 @@ export function Post({ data, userPost }) {
                                         {
                                             !postComment[index] || postComment[index].value == "" ? ("") : (<span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }} id={index} onClick={clearComment}>Post</span>)
                                         }
-                                        <SlEmotsmile size={12} style={{ cursor: "pointer" }} color={colors.gray} />
+                                        <SlEmotsmile size={12} className="post-comment-emot" />
                                     </div>
                                 </div>
                                 <div className="post-time">
