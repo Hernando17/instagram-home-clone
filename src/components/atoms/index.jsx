@@ -1,1 +1,2 @@
-export * from './storyNextButton';
+export * from './story';
+export * from './input';

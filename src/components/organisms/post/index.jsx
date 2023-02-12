@@ -2,6 +2,9 @@ import { useState } from "react";
 import { BsBookmark } from "react-icons/bs";
 import { Ellipsis } from "../../../utils";
 import { SlHeart, SlPaperPlane, SlBubble, SlOptions, SlEmotsmile } from "react-icons/sl";
+import { colors } from "../../../themes";
+import { InputComment, StoryPostReact } from "../../../components";
+
 
 export function Post({ data, userPost }) {
     const [detail, setDetail] = useState([]);
@@ -56,24 +59,17 @@ export function Post({ data, userPost }) {
                         <img className="post-image" src={userPost[index].post} />
                         <div className="post-action">
                             <div className="post-action-container">
-                                <div className="post-react">
-                                    <div className="post-react-button">
-                                        <SlHeart size={22} className="post-react-icon" />
-                                        <SlBubble size={22} className="post-react-icon" />
-                                        <SlPaperPlane size={22} className="post-react-icon" />
-                                    </div>
-                                    <BsBookmark size={22} className="post-react-icon" />
-                                </div>
+                                <StoryPostReact />
                                 <div className="post-like" style={{ cursor: "pointer", fontSize: 14 }}>
                                     <p>{userPost[index].like} likes</p>
                                 </div>
                                 <div className="post-caption">
                                     <p style={{ fontSize: 14 }}><a href="#" className="post-username">{post.caption.from.username}</a> {Ellipsis({ text: post.caption.text, limit: !detail[index] ? 40 : 1000 })} {
-                                        !detail[index] && post.caption.text.length > 40 ? (<span style={{ cursor: "pointer", color: "#8e8e8e" }} id={index} onClick={openDetail}>more</span>) : ("")
+                                        !detail[index] && post.caption.text.length > 40 ? (<span style={{ cursor: "pointer", color: colors.gray }} id={index} onClick={openDetail}>more</span>) : ("")
                                     } </p>
                                 </div>
                                 <div className="post-comment">
-                                    <p style={{ color: "#8e8e8e", fontSize: 14 }}>View all {userPost[index].comment.length} comments</p>
+                                    <p style={{ color: colors.gray, fontSize: 14 }}>View all {userPost[index].comment.length} comments</p>
                                 </div>
                                 {userPost[index].comment.slice(0, 1).map((comment, number) => (
                                     <div className="post-caption" key={number}>
@@ -81,17 +77,16 @@ export function Post({ data, userPost }) {
                                     </div>
                                 ))}
                                 <div className="post-input">
-                                    <input type="text" id={index} value={!postComment[index] ? "" : postComment[index].value} onChange={setComment} className="post-comment-input" placeholder="Add a comment..." />
+                                    <InputComment index={index} postComment={postComment} onChange={setComment} placeholder="Add a comment..." />
                                     <div className="post-comment-action">
                                         {
                                             !postComment[index] || postComment[index].value == "" ? ("") : (<span style={{ color: "#0095f6", cursor: "pointer", fontSize: 14 }} id={index} onClick={clearComment}>Post</span>)
                                         }
-
-                                        <SlEmotsmile size={12} style={{ cursor: "pointer" }} color="#8e8e8e" />
+                                        <SlEmotsmile size={12} style={{ cursor: "pointer" }} color={colors.gray} />
                                     </div>
                                 </div>
                                 <div className="post-time">
-                                    <p style={{ color: "#8e8e8e", fontSize: 10 }}>15 MINUTES AGO</p>
+                                    <p style={{ color: colors.gray, fontSize: 10 }}>15 MINUTES AGO</p>
                                 </div>
                             </div>
                         </div>

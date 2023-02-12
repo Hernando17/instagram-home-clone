@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { useSelector } from "react-redux";
-import { Ellipsis } from "../../../utils";
-import { faAdd } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { currentUser } from "../../../redux/features/userSlice";
 import {
     SnapList,
     SnapItem,
 } from 'react-snaplist-carousel';
+import { StoryUser, StoryFollowing } from '../../molecules';
 
 export function Story({ data, userPost }) {
     const user = useSelector(currentUser);
@@ -17,25 +16,12 @@ export function Story({ data, userPost }) {
             <div className="story-container">
                 <SnapList className="story-list">
                     <SnapItem snapAlign="center" className="story-item-upload">
-                        <div className="gradient-off">
-                            <img className="story-pp" src={user.pp} />
-                            <div className="story-add">
-                                <FontAwesomeIcon icon={faAdd} size="sm" color="white" />
-                            </div>
-                        </div>
-                        <p className="story-username">Your story</p>
+                        <StoryUser user={user} />
                     </SnapItem>
                     {
                         data.map((item, index) => (
                             <SnapItem snapAlign="center" key={index}  >
-                                <div className="story-item" >
-                                    <div className="gradient">
-                                        <div className="gradient-gap">
-                                            <img className="story-pp" src={userPost[index].pp} />
-                                        </div>
-                                    </div>
-                                    <p className="story-username">{Ellipsis({ text: item.user.username, limit: 9 })}</p>
-                                </div>
+                                <StoryFollowing dummy={userPost} index={index} user={item} />
                             </SnapItem>
                         ))
                     }
