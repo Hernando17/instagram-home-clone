@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { BsBookmark } from "react-icons/bs";
 import { Ellipsis } from "../../../utils";
-import { SlHeart, SlPaperPlane, SlBubble, SlOptions, SlEmotsmile } from "react-icons/sl";
+import { SlEmotsmile } from "react-icons/sl";
 import { colors } from "../../../themes";
-import { InputComment, StoryPostReact } from "../../../components";
-
+import { InputComment, PostReact, PostHeader } from "../../../components";
 
 export function Post({ data, userPost }) {
     const [detail, setDetail] = useState([]);
@@ -47,19 +45,11 @@ export function Post({ data, userPost }) {
             {
                 data.map((post, index) => (
                     <div key={index} className="post-container">
-                        <div className="post-header">
-                            <div className="post-header-container">
-                                <div className="post-user">
-                                    <img className="post-pp" src={userPost[index].pp} />
-                                    <a href="#" className="post-username">{post.user.username}</a>
-                                </div>
-                                <SlOptions className="post-react-icon" />
-                            </div>
-                        </div>
+                        <PostHeader user={userPost[index]} post={post} />
                         <img className="post-image" src={userPost[index].post} />
                         <div className="post-action">
                             <div className="post-action-container">
-                                <StoryPostReact />
+                                <PostReact />
                                 <div className="post-like" style={{ cursor: "pointer", fontSize: 14 }}>
                                     <p>{userPost[index].like} likes</p>
                                 </div>

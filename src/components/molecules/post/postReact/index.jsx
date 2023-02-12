@@ -1,7 +1,7 @@
 import { BsBookmark } from "react-icons/bs";
 import { SlHeart, SlPaperPlane, SlBubble } from "react-icons/sl";
 
-export function StoryPostReact() {
+export function PostReact() {
     return (
         <div className="post-react">
             <div className="post-react-button">
