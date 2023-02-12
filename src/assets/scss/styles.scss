@@ -99,7 +99,7 @@
 
 .tabnav {
   display: flex;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #fff;
@@ -110,14 +110,16 @@
     justify-content: space-between;
     width: 100%;
     padding: 8px 12px;
+    align-items: center;
   }
 
   &-container ul {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    padding: 8px 0;
+    padding: 0 0;
     list-style: none;
+    align-items: center;
   }
 
   &-container li {
@@ -135,6 +137,27 @@
     height: 28px;
     object-fit: cover;
     border-radius: 100%;
+  }
+
+  &-icon {
+    position: relative;
+  }
+
+  &-icon-notification {
+    display: flex;
+    font-size: 14px;
+    padding: 6px;
+    width: 6px;
+    height: 6px;
+    justify-content: center;
+    border-radius: 100%;
+    color: #fff;
+    border: #fff 1px solid;
+    align-items: center;
+    background-color: #ff3040;
+    position: absolute;
+    top: -4px;
+    right: -6px;
   }
 }
 
@@ -212,6 +235,7 @@
 
   .post {
     width: 100%;
+    padding-bottom: 42px;
 
     &-container {
       display: flex;
@@ -651,7 +675,7 @@
 
       &-username {
         font-size: 14px;
-        font-weight: 600;
+        font-weight: bolder;
         text-decoration: none;
         color: black;
       }
@@ -669,6 +693,16 @@
 
       &-info span a:hover {
         text-decoration: underline;
+      }
+
+      &-action {
+        font-size: 12px;
+        color: #0095f6;
+        cursor: pointer;
+      }
+
+      &-action:hover {
+        color: #2d3c7a;
       }
     }
   }

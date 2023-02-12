@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faSearch, faCompass, faVideo, faMessage, faInbox, faAdd, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { currentUser } from '../../../redux/features/userSlice'
-import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu } from "react-icons/sl";
+import { SlMagnifier, SlCamrecorder, SlBubbles } from "react-icons/sl";
 
 export function TabNav() {
     const user = useSelector(currentUser);
@@ -12,19 +12,32 @@ export function TabNav() {
             <div className="tabnav-container">
                 <ul>
                     <li>
-                        <FontAwesomeIcon icon={faHouse} size="lg" />
+                        <div className="tabnav-icon">
+                            <FontAwesomeIcon icon={faHouse} size="lg" />
+                        </div>
                     </li>
                     <li>
-                        <SlMagnifier size={24} />
+                        <div className="tabnav-icon">
+                            <SlMagnifier size={24} />
+                        </div>
                     </li>
                     <li>
-                        <SlCamrecorder size={24} />
+                        <div className="tabnav-icon">
+                            <SlCamrecorder size={24} />
+                        </div>
                     </li>
                     <li>
-                        <SlBubbles size={24} />
+                        <div className="tabnav-icon">
+                            <div className="tabnav-icon-notification">
+                                <small>2</small>
+                            </div>
+                            <SlBubbles size={24} />
+                        </div>
                     </li>
                     <li>
-                        <img src={user.pp} className="tabnav-profile" />
+                        <div className="tabnav-icon">
+                            <img src={user.pp} className="tabnav-profile" />
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -3,11 +3,9 @@ import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { postApi } from '../redux/services/post.api'
 import { userSlice } from '../redux/features/userSlice';
-import { themeSlice } from '../redux/features/themeSlice';
 
 const rootReducers = combineReducers({
     user: userSlice.reducer,
-    theme: themeSlice.reducer,
 
     [postApi.reducerPath]: postApi.reducer,
 })

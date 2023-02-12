@@ -19,7 +19,7 @@ export function Suggestion({ data }) {
                             <span className="suggestion-name" style={{ color: "#8e8e8e", fontSize: 14 }}>{user.fullname}</span>
                         </div>
                     </div>
-                    <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 12 }}>Switch</span>
+                    <span className="suggestion-action">Switch</span>
                 </div>
                 <div className="suggestion-for-you">
                     <span style={{ color: "#8e8e8e", fontSize: 14 }}>Suggestions for you</span>
@@ -43,7 +43,7 @@ export function Suggestion({ data }) {
                                         </span>
                                     </div>
                                 </div>
-                                <span style={{ color: "#0095f6", cursor: "pointer", fontSize: 12 }}>Follow</span>
+                                <span className="suggestion-action">Follow</span>
                             </div>
                         ))
                     }
