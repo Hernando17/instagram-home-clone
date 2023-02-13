@@ -37,17 +37,17 @@ Atomic Design Component https://bradfrost.com/blog/post/atomic-web-design/
 
 ### Icon
 
-[x] React Icon https://react-icons.github.io/react-icons/
-[x] Fontawesome https://fontawesome.com/
+- [x] React Icon https://react-icons.github.io/react-icons/
+- [x] Fontawesome https://fontawesome.com/
 
 ### Style
 
-[x] Sass https://sass-lang.com/
+- [x] Sass https://sass-lang.com/
 
 ### State Management
 
-[x] Redux Toolkit https://redux-toolkit.js.org/
-[x] React Redux https://react-redux.js.org/
+- [x] Redux Toolkit https://redux-toolkit.js.org/
+- [x] React Redux https://react-redux.js.org/
 
 ### Others
 
