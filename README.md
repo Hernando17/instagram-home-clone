@@ -51,10 +51,10 @@ Atomic Design Component https://bradfrost.com/blog/post/atomic-web-design/
 
 ### Others
 
-[x] dotenv https://www.npmjs.com/package/dotenv
-[x] React Router https://reactrouter.com/
-[x] React Helmet Async https://www.npmjs.com/package/react-helmet-async
-[x] React Snaplist Carousel https://www.npmjs.com/package/react-snaplist-carousel
+- [x] dotenv https://www.npmjs.com/package/dotenv
+- [x] React Router https://reactrouter.com/
+- [x] React Helmet Async https://www.npmjs.com/package/react-helmet-async
+- [x] React Snaplist Carousel https://www.npmjs.com/package/react-snaplist-carousel
 
 ## References
 
