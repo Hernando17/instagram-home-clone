@@ -4,10 +4,23 @@ This is a Instagram Home page clone built with [Vite + ReactJs](https://vitejs.d
 
 ## Table of Contents
 
+- [Requirements](#requirements)
 - [Getting Started](#getting-started)
 - [Component](#component)
 - [Libraries](#libraries)
 - [References](#references)
+
+## Requirements
+
+- [x] Using React
+- [x] Listing of posts
+- [x] Actions on each post (like comment, share, save)
+- [x] Each post should have comments
+- [x] Stories list
+- [x] Current user name and profile icon
+- [x] Header with search, profile, messages, notifications, etc...
+- [x] Implement a dummy API call that will return the list of posts that can be used to render posts in the UI.
+- [x] Responsive design
 
 ## Getting Started
 
