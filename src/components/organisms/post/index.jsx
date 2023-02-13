@@ -2,13 +2,22 @@ import { useState, useEffect } from "react";
 import { Ellipsis } from "../../../utils";
 import { SlEmotsmile } from "react-icons/sl";
 import { colors } from "../../../themes";
-import { InputComment, PostReact, PostHeader } from "../../../components";
+import { InputComment, PostReact, PostHeader, BasicModal } from "../../../components";
 
 export function Post({ data, userPost }) {
     const [detail, setDetail] = useState([]);
     const [postComment, setPostComment] = useState([]);
     const [like, setLike] = useState([]);
     const [save, setSave] = useState([]);
+    const [modal, setModal] = useState(false);
+
+    const openModal = () => {
+        setModal(true);
+    }
+
+    const closeModal = () => {
+        setModal(false);
+    }
 
     const savePost = (e) => {
         e.preventDefault();
@@ -73,7 +82,33 @@ export function Post({ data, userPost }) {
             {
                 data.map((post, index) => (
                     <div key={index} className="post-container">
-                        <PostHeader user={userPost[index]} post={post} />
+                        {
+                            modal ? (
+                                <BasicModal isOpen={modal} onClose={closeModal}>
+                                    <div className="post-utility-modal">
+                                        <span style={{ color: colors.danger, fontWeight: "bold" }}>Report</span>
+                                        <hr />
+                                        <span style={{ color: colors.danger, fontWeight: "bold" }}>Unfollow</span>
+                                        <hr />
+                                        <span>Add to favorites</span>
+                                        <hr />
+                                        <span>Go to post</span>
+                                        <hr />
+                                        <span>Share to...</span>
+                                        <hr />
+                                        <span>Copy link</span>
+                                        <hr />
+                                        <span>Embed</span>
+                                        <hr />
+                                        <span>Abot this account</span>
+                                        <hr />
+                                        <span>Cancel</span>
+                                    </div>
+                                </BasicModal>
+                            ) : ("")
+                        }
+
+                        <PostHeader user={userPost[index]} post={post} openUtility={openModal} />
                         <img className="post-image" src={userPost[index].post} />
                         <div className="post-action">
                             <div className="post-action-container">

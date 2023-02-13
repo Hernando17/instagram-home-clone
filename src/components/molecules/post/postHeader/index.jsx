@@ -1,6 +1,6 @@
 import { SlOptions } from "react-icons/sl";
 
-export function PostHeader({ user, post }) {
+export function PostHeader({ user, post, openUtility }) {
     return (
         <div className="post-header">
             <div className="post-header-container">
@@ -9,7 +9,7 @@ export function PostHeader({ user, post }) {
                     <a href="#" className="post-username">{post.user.username}</a>
                     <span className="post-head-time">• 15m</span>
                 </div>
-                <SlOptions className="post-react-icon" />
+                <SlOptions className="post-react-icon" onClick={openUtility} />
             </div>
         </div>
     )
