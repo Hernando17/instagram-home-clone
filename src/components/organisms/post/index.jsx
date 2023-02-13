@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Ellipsis } from "../../../utils";
 import { SlEmotsmile } from "react-icons/sl";
 import { colors } from "../../../themes";
@@ -7,8 +7,25 @@ import { InputComment, PostReact, PostHeader } from "../../../components";
 export function Post({ data, userPost }) {
     const [detail, setDetail] = useState([]);
     const [postComment, setPostComment] = useState([]);
+    const [like, setLike] = useState([]);
 
-    function openDetail(e) {
+    const likePost = (e) => {
+        e.preventDefault();
+        setLike({
+            ...like,
+            [Number(e.target.id)]: true
+        });
+    };
+
+    const dislikePost = (e) => {
+        e.preventDefault();
+        setLike({
+            ...like,
+            [Number(e.target.id)]: false
+        });
+    };
+
+    const openDetail = (e) => {
         e.preventDefault();
         setDetail({
             ...detail,
@@ -18,7 +35,7 @@ export function Post({ data, userPost }) {
         });
     }
 
-    function setComment(e) {
+    const setComment = (e) => {
         e.preventDefault();
         setPostComment({
             ...postComment,
@@ -29,7 +46,7 @@ export function Post({ data, userPost }) {
         });
     }
 
-    function clearComment(e) {
+    const clearComment = (e) => {
         e.preventDefault();
         setPostComment({
             ...postComment,
@@ -49,7 +66,7 @@ export function Post({ data, userPost }) {
                         <img className="post-image" src={userPost[index].post} />
                         <div className="post-action">
                             <div className="post-action-container">
-                                <PostReact />
+                                <PostReact index={index} likeAction={likePost} dislikeAction={dislikePost} isLiked={like[index]} />
                                 <div className="post-like" style={{ cursor: "pointer", fontSize: 14 }}>
                                     <p>{userPost[index].like} likes</p>
                                 </div>
