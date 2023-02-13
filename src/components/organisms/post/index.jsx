@@ -86,7 +86,7 @@ export function Post({ data, userPost }) {
                             modal ? (
                                 <BasicModal isOpen={modal} onClose={closeModal}>
                                     <div className="post-utility-modal">
-                                        <span style={{ color: colors.danger, fontWeight: "bold" }}>Report</span>
+                                        <span style={{ color: colors.danger, fontWeight: "bold", borderTopRightRadius: '16px', borderTopLeftRadius: '16px' }}>Report</span>
                                         <hr />
                                         <span style={{ color: colors.danger, fontWeight: "bold" }}>Unfollow</span>
                                         <hr />
@@ -100,9 +100,9 @@ export function Post({ data, userPost }) {
                                         <hr />
                                         <span>Embed</span>
                                         <hr />
-                                        <span>Abot this account</span>
+                                        <span>About this account</span>
                                         <hr />
-                                        <span>Cancel</span>
+                                        <span style={{ borderBottomRightRadius: '16px', borderBottomLeftRadius: '16px' }} onClick={closeModal}>Cancel</span>
                                     </div>
                                 </BasicModal>
                             ) : ("")
