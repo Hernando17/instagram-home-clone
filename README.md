@@ -5,7 +5,7 @@ This is a Instagram Home page clone built with [Vite + ReactJs](https://vitejs.d
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Concepts](#concepts)
+- [Component](#component)
 - [Libraries](#libraries)
 - [References](#references)
 
