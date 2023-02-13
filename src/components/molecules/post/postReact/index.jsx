@@ -1,6 +1,6 @@
-import { FaRegHeart, FaHeart, FaRegComment, FaRegPaperPlane, FaRegBookmark } from "react-icons/fa";
+import { FaRegHeart, FaHeart, FaRegComment, FaRegPaperPlane, FaRegBookmark, FaBookmark } from "react-icons/fa";
 
-export function PostReact({ index, isLiked, likeAction, dislikeAction }) {
+export function PostReact({ index, isLiked, likeAction, dislikeAction, savePost, unsavePost, isSave }) {
     return (
         <div className="post-react">
             <div className="post-react-button">
@@ -10,7 +10,9 @@ export function PostReact({ index, isLiked, likeAction, dislikeAction }) {
                 <FaRegComment size={22} className="post-react-icon" />
                 <FaRegPaperPlane size={22} className="post-react-icon" />
             </div>
-            <FaRegBookmark size={22} className="post-react-icon" />
+            {
+                isSave ? <FaBookmark size={22} style={{ color: "#000" }} id={index} className="post-react-icon" onClick={unsavePost} /> : <FaRegBookmark size={22} className="post-react-icon" id={index} onClick={savePost} />
+            }
         </div>
     )
 }

@@ -8,6 +8,23 @@ export function Post({ data, userPost }) {
     const [detail, setDetail] = useState([]);
     const [postComment, setPostComment] = useState([]);
     const [like, setLike] = useState([]);
+    const [save, setSave] = useState([]);
+
+    const savePost = (e) => {
+        e.preventDefault();
+        setSave({
+            ...save,
+            [Number(e.target.id)]: true
+        });
+    };
+
+    const unsavePost = (e) => {
+        e.preventDefault();
+        setSave({
+            ...save,
+            [Number(e.target.id)]: false
+        });
+    };
 
     const likePost = (e) => {
         e.preventDefault();
@@ -39,10 +56,7 @@ export function Post({ data, userPost }) {
         e.preventDefault();
         setPostComment({
             ...postComment,
-            [e.target.id]: {
-                value: e.target.value,
-                id: e.target.id
-            }
+            [e.target.id]: e.target.value,
         });
     }
 
@@ -50,12 +64,13 @@ export function Post({ data, userPost }) {
         e.preventDefault();
         setPostComment({
             ...postComment,
-            [e.target.id]: {
-                value: "",
-                id: e.target.id
-            }
+            [e.target.id]: ""
         });
     }
+
+    useEffect(() => {
+        console.log(save)
+    }, [save])
 
     return (
         <div className="post">
@@ -66,7 +81,7 @@ export function Post({ data, userPost }) {
                         <img className="post-image" src={userPost[index].post} />
                         <div className="post-action">
                             <div className="post-action-container">
-                                <PostReact index={index} likeAction={likePost} dislikeAction={dislikePost} isLiked={like[index]} />
+                                <PostReact index={index} likeAction={likePost} dislikeAction={dislikePost} isLiked={like[index]} isSave={save[index]} savePost={savePost} unsavePost={unsavePost} />
                                 <div className="post-like" style={{ cursor: "pointer", fontSize: 14 }}>
                                     <p>{userPost[index].like} likes</p>
                                 </div>
