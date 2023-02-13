@@ -36,18 +36,18 @@ Atomic Design Component https://bradfrost.com/blog/post/atomic-web-design/
 ## Libraries
 
 - Icon
-  [x] [React Icon](https://react-icons.github.io/react-icons/)
-  [x] [Fontawesome](https://fontawesome.com/)
+  [x] React Icon https://react-icons.github.io/react-icons/
+  [x] Fontawesome https://fontawesome.com/
 - Style
-  [x] [Sass](https://sass-lang.com/)
+  [x] Sass https://sass-lang.com/
 - State Management
-  [x] [Redux Toolkit](https://redux-toolkit.js.org/)
-  [x] [React Redux](https://react-redux.js.org/)
+  [x] Redux Toolkit https://redux-toolkit.js.org/
+  [x] React Redux https://react-redux.js.org/
 - Others
-  [x] [dotenv](https://www.npmjs.com/package/dotenv)
-  [x] [React Router](https://reactrouter.com/)
-  [x] [React Helmet Async](https://www.npmjs.com/package/react-helmet-async)
-  [x] [React Snaplist Carousel](https://www.npmjs.com/package/react-snaplist-carousel)
+  [x] dotenv https://www.npmjs.com/package/dotenv
+  [x] React Router https://reactrouter.com/
+  [x] React Helmet Async https://www.npmjs.com/package/react-helmet-async
+  [x] React Snaplist Carousel https://www.npmjs.com/package/react-snaplist-carousel
 
 ## References
 
