@@ -68,10 +68,6 @@ export function Post({ data, userPost }) {
         });
     }
 
-    useEffect(() => {
-        console.log(save)
-    }, [save])
-
     return (
         <div className="post">
             {
