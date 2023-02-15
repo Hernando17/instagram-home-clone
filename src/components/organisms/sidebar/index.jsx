@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faCompass, faVideoCamera } from '@fortawesome/free-solid-svg-icons'
 import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu, SlHome } from "react-icons/sl";
@@ -6,13 +7,39 @@ import { useSelector } from 'react-redux'
 import { currentUser } from '../../../redux/features/userSlice'
 import { InstagramTextLogo, InstagramLogo } from '../../../assets';
 import { useLocation, Link } from 'react-router-dom';
+import { BasicModal, ButtonPrimary } from '../../atoms';
 
 export function Sidebar() {
     const user = useSelector(currentUser);
     const location = useLocation();
+    const [createModal, setCreateModal] = useState(false);
+
+    const openCreateModal = () => {
+        setCreateModal(true);
+    }
+
+    const closeCreateModal = () => {
+        setCreateModal(false);
+    }
 
     return (
         <div className="sidebar">
+            {
+                createModal ? (
+                    <BasicModal isOpen={createModal} onClose={closeCreateModal}>
+                        <div className="create-modal">
+                            <div className="create-modal-title">
+                                <span>Create new post</span>
+                            </div>
+                            <div className="create-modal-container">
+                                <div className="create-modal-input">
+                                    <ButtonPrimary text="Select from computer" />
+                                </div>
+                            </div>
+                        </div>
+                    </BasicModal>
+                ) : ("")
+            }
             <div className="sidebar-container">
                 <img className="sidebar-logo-instagram" src={InstagramTextLogo} />
                 <img className="sidebar-logo-ig" src={InstagramLogo} />
@@ -99,7 +126,7 @@ export function Sidebar() {
                             </div>
                             <span>Notifications</span>
                         </li>
-                        <li>
+                        <li onClick={openCreateModal}>
                             <div className="sidebar-icon">
                                 <SlPlus size={24} />
                             </div>
