@@ -14,7 +14,6 @@
   position: sticky;
   top: 0;
   width: 100%;
-  height: fit-content;
   background-color: #fff;
   z-index: 10;
 
@@ -142,6 +141,15 @@
     height: 28px;
     object-fit: cover;
     border-radius: 100%;
+  }
+
+  &-profile.active {
+    border: 1px solid black;
+  }
+
+  &-link {
+    color: black;
+    text-decoration: none;
   }
 
   &-icon {
@@ -457,7 +465,7 @@
       margin: 56px 0 0 0;
       padding: 8px 0;
       list-style: none;
-      gap: 10px;
+      gap: 9px;
     }
 
     & ul li {
@@ -478,6 +486,10 @@
       height: 24px;
       object-fit: cover;
       border-radius: 100%;
+    }
+
+    &-profile.active {
+      border: 2px solid black;
     }
 
     &-more-container {

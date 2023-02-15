@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse, faCompass, faVideoCamera, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faCompass, faVideoCamera } from '@fortawesome/free-solid-svg-icons'
 import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu, SlHome } from "react-icons/sl";
+import { ImBubbles2 } from "react-icons/im";
 import { useSelector } from 'react-redux'
 import { currentUser } from '../../../redux/features/userSlice'
 import { InstagramTextLogo, InstagramLogo } from '../../../assets';
@@ -18,7 +19,9 @@ export function Sidebar() {
                 <div className="sidebar-mobile">
                     <div className="sidebar-action">
                         <SlPlus size={24} />
-                        <SlHeart size={24} />
+                        <Link to="/notifications" className="sidebar-link">
+                            <SlHeart size={24} />
+                        </Link>
                     </div>
                 </div>
                 <div className="sidebar-medium">
@@ -72,15 +75,24 @@ export function Sidebar() {
                                 <span className={location.pathname == "/reels" ? "active" : ""}>Reels</span>
                             </li>
                         </Link>
-                        <li>
-                            <div className="sidebar-icon">
-                                <div className="sidebar-icon-notification">
-                                    <small>2</small>
+                        <Link to="/messages" className="sidebar-link">
+                            <li>
+                                <div className="sidebar-icon">
+                                    <div className="sidebar-icon-notification">
+                                        <small>2</small>
+                                    </div>
+                                    {
+                                        location.pathname == "/messages" ? (
+                                            <ImBubbles2 size={24} />
+                                        ) : (
+                                            <SlBubbles size={24} />
+                                        )
+
+                                    }
                                 </div>
-                                <SlBubbles size={24} />
-                            </div>
-                            <span>Messages</span>
-                        </li>
+                                <span className={location.pathname == "/messages" ? "active" : ""}>Messages</span>
+                            </li>
+                        </Link>
                         <li>
                             <div className="sidebar-icon">
                                 <SlHeart size={24} />
@@ -93,12 +105,14 @@ export function Sidebar() {
                             </div>
                             <span>Create</span>
                         </li>
-                        <li>
-                            <div className="sidebar-icon">
-                                <img className="sidebar-profile" src={user.pp} />
-                            </div>
-                            <span>Profile</span>
-                        </li>
+                        <Link to="/profile" className="sidebar-link">
+                            <li>
+                                <div className="sidebar-icon">
+                                    <img className={location.pathname == "/profile" ? "sidebar-profile active" : "sidebar-profile"} src={user.pp} />
+                                </div>
+                                <span className={location.pathname == "/profile" ? "active" : ""}>Profile</span>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
                 <div className="sidebar-more-container">
