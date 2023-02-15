@@ -52,7 +52,7 @@ Atomic Design Component https://bradfrost.com/blog/post/atomic-web-design/
 
 ### Icon
 
-- [x] React Icon https://react-icons.github.io/react-icons/
+- [x] React Icons https://react-icons.github.io/react-icons/
 - [x] Fontawesome https://fontawesome.com/
 
 ### Style

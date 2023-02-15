@@ -77,6 +77,10 @@ export function Post({ data, userPost }) {
         });
     }
 
+    useEffect(() => {
+        console.log(like, save);
+    }, [like, save])
+
     return (
         <div className="post">
             {

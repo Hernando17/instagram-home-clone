@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faCompass, faVideoCamera, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
+import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu, SlHome } from "react-icons/sl";
 import { useSelector } from 'react-redux'
 import { currentUser } from '../../../redux/features/userSlice'
-import { SlCompass, SlMagnifier, SlCamrecorder, SlBubbles, SlHeart, SlPlus, SlMenu } from "react-icons/sl";
 import { InstagramTextLogo, InstagramLogo } from '../../../assets';
+import { useLocation, Link } from 'react-router-dom';
 
 export function Sidebar() {
-    const user = useSelector(currentUser)
+    const user = useSelector(currentUser);
+    const location = useLocation();
 
     return (
         <div className="sidebar">
@@ -21,30 +23,55 @@ export function Sidebar() {
                 </div>
                 <div className="sidebar-medium">
                     <ul>
-                        <li>
-                            <div className="sidebar-icon">
-                                <FontAwesomeIcon icon={faHouse} size="lg" />
-                            </div>
-                            <span className="active">Home</span>
-                        </li>
+                        <Link to="/" className="sidebar-link">
+                            <li>
+                                <div className="sidebar-icon">
+                                    {
+                                        location.pathname == "/" ? (
+                                            <FontAwesomeIcon icon={faHouse} size="lg" />
+                                        ) : (
+                                            <SlHome size={24} />
+                                        )
+                                    }
+
+                                </div>
+                                <span className={location.pathname == "/" ? "active" : ""}>Home</span>
+                            </li>
+                        </Link>
                         <li>
                             <div className="sidebar-icon">
                                 <SlMagnifier size={24} />
                             </div>
                             <span>Search</span>
                         </li>
-                        <li>
-                            <div className="sidebar-icon">
-                                <SlCompass size={24} />
-                            </div>
-                            <span>Explore</span>
-                        </li>
-                        <li>
-                            <div className="sidebar-icon">
-                                <SlCamrecorder size={24} />
-                            </div>
-                            <span>Reels</span>
-                        </li>
+                        <Link to="/explore" className="sidebar-link">
+                            <li>
+                                <div className="sidebar-icon">
+                                    {
+                                        location.pathname == "/explore" ? (
+                                            <FontAwesomeIcon icon={faCompass} size="lg" />
+                                        ) : (
+                                            <SlCompass size={24} />
+                                        )
+                                    }
+                                </div>
+                                <span className={location.pathname == "/explore" ? "active" : ""}>Explore</span>
+                            </li>
+                        </Link>
+                        <Link to="/reels" className="sidebar-link">
+                            <li>
+                                <div className="sidebar-icon">
+                                    {
+                                        location.pathname == "/reels" ? (
+                                            <FontAwesomeIcon icon={faVideoCamera} size="lg" />
+                                        ) : (
+                                            <SlCamrecorder size={24} />
+                                        )
+                                    }
+                                </div>
+                                <span className={location.pathname == "/reels" ? "active" : ""}>Reels</span>
+                            </li>
+                        </Link>
                         <li>
                             <div className="sidebar-icon">
                                 <div className="sidebar-icon-notification">
