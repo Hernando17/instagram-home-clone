@@ -1,4 +1,4 @@
-# YoRipe Frontend Assignment
+# Instagram Home Page Clone
 
 This is a Instagram Home page clone built with [Vite + ReactJs](https://vitejs.dev/) by myself.
 
